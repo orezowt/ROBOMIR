@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*-----------------*/
+:root{
+	--header-height: 80px;
+	--section-even-color: #fff;
+	--section-odd-color: #ECE8E8;
+	--button-color: #00BFFF;
+	--button-hover-color: #1E90FF;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat";
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+header{
+	height: var(--header-height);
+	background: #fee;
+	display: flex;
+	align-items: center;
+	padding: 0 40px;
+	gap: 40px;
+	position: sticky;
+	top: 0;
+	z-index: 999;
+}
+
+#header-logo{
+	max-width: 300px;
+	height: 100%;
+}
+
+#header-logo img{
+	height: 100%;
+}
+
+nav{
+	display: flex;
+	flex-grow: 2;
+	justify-content: flex-end;
+	gap: 20px;
+}
+
+nav a{
+	text-decoration: none;
+	color: #333;
+	padding: 20px 0;
+	transition:  0.5s;
+}
+
+nav a:hover{
+	color: blue;
+}
+
+main{
+	position: relative;
+}
+
+
+
+#hero-section{
+	position: relative;
+	height: calc(100vh - var(--header-height));
+	padding: 0;
+	background: url("images/bg.svg") no-repeat center / cover;
+	animation: bg-sliding 10s infinite ease-in-out alternate;
+	background-attachment: fixed;
+
+	.row-content{
+		height: 100%;
+		align-items: center;
+	}
+
+	.column-content{
+		margin: 100px 0 0 10vw;
+		padding-bottom: 100px;
+		width: 50%;
+	}
+
+	h1{
+		font-size: 32px;
+		margin: 0;
+		text-align: left;
+		color: #222;
+		font-weight: 900;
+
+		span{
+			color: var(--button-hover-color);
+		}
+	}
+
+
+	.hero-section-image{
+		width: 50%;
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+
+		ul{
+			list-style: none;
+			height: 100%;
+			position: relative;
+/*			overflow: hidden;*/
+		}
+
+		li{
+			display: block;
+/*			width: 100%;*/
+			height: 100%;
+			background: no-repeat center / cover;
+			float: left;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+
+	a{
+		display: block;
+		background: var(--button-color);
+		padding: 15px 25px;
+		max-height: 50px;
+		border-radius: 25px;
+		text-decoration: none;
+		color: #fff;
+		font-weight: 600;
+		transition: 0.3s;
+	}
+
+	a:hover{
+		background: var(--button-hover-color);
+	}
+
+	.hero-buttons{
+		gap: 30px;
+	}
+}
+
+
+
+
+/*main:before{
+	content: '';
+	position: absolute;
+	background: #000;
+	bottom: 0;
+	left: 0;
+	width: 50%;
+	height: 100px;
+	transform: skewX(90deg);
+}*/
+
+section{
+	padding: 100px 10vw;
+	position: relative;
+	text-align: justify;
+
+	h1{
+		margin-bottom: 40px;
+		text-align: center;
+		font-size: 42px;
+	}
+
+	h3{
+		text-align: center;
+	}
+}
+
+section:nth-child(odd){
+	background: var(--section-odd-color);
+}
+
+section:nth-child(even){
+	background: var(--section-even-color);
+/*	background: url("images/bg-section-2.svg") no-repeat center / cover;*/
+}
+
+
+#main-section{
+	background: #ECE8E8;
+	padding: 100px 80px;
+}
+
+.column-content{
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+}
+
+.row-content{
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+	justify-content: center;
+
+}
+
+.wrap-content{
+	display: flex;
+	gap: 60px;
+}
+
+.left-wrap-content{
+	display: flex;
+	max-width: 45%;
+}
+
+.left-wrap-content h1{
+	font-size: 50px;
+	margin-bottom: 0;
+}
+
+.left-wrap-inner-content{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	row-gap: inherit;
+	padding: 0 0 10px 30px;
+	border-left: 1px solid #000;
+	text-align: justify;
+}
+
+.left-wrap-inner-content:before{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 3px;
+	background: #000;
+	border-radius: 50%;
+	top: -2px;
+	left: -2px;
+}
+
+.right-wrap-content-image{
+	width: 100%;
+	max-width: 640px;
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.right-wrap-content-image img{
+	width: 100%;
+}
+
+.right-wrap-content-image div{
+	position: absolute;
+	width: 75%;	
+}
+
+.right-wrap-content-image div:first-child{
+	transform: translate(-30%, 40%);
+	z-index: 1;	
+}
+
+.right-wrap-content-image div:last-child{
+	transform: translate(40%, 0%);
+}
+
+.about-us-description{
+	padding-bottom: 40px;
+	border-bottom: 1px solid #000;
+}
+
+.about-us-indicators{
+	justify-content: center;
+}
+
+.about-us-indicators div{
+	text-align: center;
+	width: 200px;
+}
+
+.about-us-indicators div p:first-child{
+	font-size: 30px;
+	font-weight: 600;
+}
+
+#courses .row-content{
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.courses{
+	width: 30%;
+	background: #fee;
+	row-gap: 0;
+	border-radius: 25px;
+/*	padding-bottom: 30px;*/
+}
+
+.courses-image{
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	border-radius: 25px 25px 0 0;
+}
+
+.courses-info{
+	padding: 30px;
+/*	text-align: center;*/
+}
+
+.courses-description{
+/*	padding: 30px;*/
+	font-size: 14px;
+	height: 300px;
+	overflow: hidden;
+	margin-bottom: 20px;
+	position: relative;
+/*	text-align: justify;*/
+}
+
+.courses-description:after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100px;
+	background: #000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(0deg, rgba(255,238,238,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.courses-description h2{
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.courses img{
+	width:  100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.button-read-more, .button-action{
+	cursor: pointer;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 10px;
+	background: var(--button-color);
+	color: #fff;
+	font-weight: 600;
+	font-size: 14px;
+	transition: 0.5s;
+	display: block;
+	margin: auto;
+}
+
+.button-read-more:hover{
+	background: var(--button-hover-color);
+}
+
+/*	РАЗВЕРНУТОЕ ОПИСАНИЕ КУРСА  */
+
+.full-description{
+	width: 100%;
+	flex-grow: 2;
+	flex-direction: row;
+	order: -1;
+/*	transition: 0.8s;*/
+
+	/* -- ВАРИАНТ 1 */
+	.courses-image{
+		height: 100%;
+		flex-basis: 40%;
+		border-radius: 25px 0 0 25px;
+	}
+
+	/*  ВАРИАНТ 2 */
+	.courses-image{
+		height: 80%;
+		flex-basis: 500px;
+		border-radius: 25px;
+		position: relative;
+		top: 10%;
+		left: -50px;
+		box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+	}
+
+	.courses-info{
+		flex-basis: 60%;
+		padding-left: 0;
+	}
+
+	.courses-description:after{
+		display: none;
+	}
+}
+/* ------------------ */
+
+
+
+/* РАЗДЕЛ КОНТАКТОВ */
+.contacts-info{
+	flex-grow: 0;
+
+	img{
+		display: block;
+		width: 60px;
+	}
+
+	.row-content{
+		justify-content: flex-start;
+		align-items: center;
+		gap: 30px;
+	}
+}
+
+
+
+.contacts-map{
+	flex-grow: 2;
+}
+/* ---------------- */
+
+/*  ФОРМА ОБРАТНОЙ СВЯЗИ  */
+#feedback{
+	form{
+		width: 500px;
+		margin: auto;
+		margin-top: 40px;
+		background: #E3DDDD;
+		padding: 50px;
+		border-radius: 25px;
+		position: relative;
+	}
+
+/*	form:before{
+		content: '';
+		display: block;
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		background: #E3DDDD;
+		position: absolute;
+		top: 50px;
+		left: -50px;
+	}*/
+ 
+	input, textarea{
+		padding: 20px;
+		border: none;
+		border-radius: 25px;
+		resize: none;
+		position: relative;
+	}
+
+	textarea{
+		min-height: 200px;
+	}
+
+	textarea::-webkit-scrollbar{
+		width: 10px;
+		height: 90px;
+	}
+
+	textarea::-webkit-scrollbar-track{
+		background: var(--button-color);
+		border-radius: 5px;
+	}
+
+	textarea::-webkit-scrollbar-thumb{
+		background: var(--button-hover-color);
+		border-radius: 5px;
+	}
+
+	input:focus,
+	textarea:focus {
+		color: #212529;
+		background-color: #fff;
+		border-color: #bdbdbd;
+		outline: 0;
+		box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+	}
+
+	input[type="submit"]{
+		background: var(--button-color);
+		color: #fff;
+		transition: 0.5s;
+		font-size: 16px;
+	}
+
+	input[type="submit"]:hover{
+		background: var(--button-hover-color);
+	}
+
+	input[name="name"]::after{
+		content: '*';
+		display: block;
+		position: absolute;
+		right: -20px;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		z-index: 99;
+	}
+	
+}
+/*  --------------------- */
+
+
+/*  ФУТЕР  */
+footer{
+	padding: 50px;
+
+	.row-content{
+		align-items: center;
+	}
+
+	.column-content{
+		row-gap: 10px;
+	}
+
+	.footer-contacts{
+		row-gap: 20px;
+		align-items: flex-end;
+	}
+
+	div{
+		min-width: 30%;
+	}
+}
+
+#footer-logo{
+	text-align: center;
+
+	img{
+		width: 200px;
+		height: 200px;
+		object-fit: contain;
+	}
+}
+/*  ------  */
+
+
+
+
+@keyframes bg-sliding{
+	from{
+		background-position: center center;
+	}
+
+	to{
+		background-position: 0 0;
+	}
+}
+
+
+
+
+
+
+/*  АДАПТИВНОСТЬ ЭЛЕМЕНТОВ  */
+
+/* БОЛЬШИЕ МОНИТОРЫ */
+@media (min-width: 1200px) {
+
+}
+
+/* СРЕДНИЕ МОНИТОРЫ */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* МАЛЕНЬКИЕ МОНИТОРЫ */
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+/* ПЛАНШЕТЫ И АЛЬБОМНАЯ ОРИЕНТАЦИЯ ТЕЛЕФОНОВ */
+@media (max-width: 767px) {
+
+}
+
+/* Landscape phones and smaller */
+@media (max-width: 480px) {
+
+}
