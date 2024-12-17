@@ -412,26 +412,37 @@ section:nth-child(even){
 
 
 /* РАЗДЕЛ КОНТАКТОВ */
-.contacts-info{
-	flex-grow: 0;
+#contacts{
+	padding: 0;
 
-	img{
-		display: block;
-		width: 60px;
+	.contacts-info{
+		width: 50%;
+		padding: 100px 0 100px 10vw;
+
+		h1{
+			margin: 0;
+		}
+
+		img{
+			display: block;
+			width: 60px;
+		}
+
+		.row-content{
+			justify-content: flex-start;
+			align-items: center;
+			gap: 30px;
+		}
 	}
 
-	.row-content{
-		justify-content: flex-start;
-		align-items: center;
-		gap: 30px;
+	.contacts-map{
+		width: 50%;
 	}
 }
 
 
 
-.contacts-map{
-	flex-grow: 2;
-}
+
 /* ---------------- */
 
 /*  ФОРМА ОБРАТНОЙ СВЯЗИ  */
@@ -444,6 +455,7 @@ section:nth-child(even){
 		padding: 50px;
 		border-radius: 25px;
 		position: relative;
+		row-gap: 20px;
 	}
 
 /*	form:before{
@@ -522,7 +534,7 @@ section:nth-child(even){
 
 /*  ФУТЕР  */
 footer{
-	padding: 50px;
+	padding: 50px 50px 20px;
 
 	.row-content{
 		align-items: center;
@@ -533,24 +545,30 @@ footer{
 	}
 
 	.footer-contacts{
-		row-gap: 20px;
+		row-gap: 10px;
 		align-items: flex-end;
 	}
 
 	div{
 		min-width: 30%;
 	}
-}
 
-#footer-logo{
-	text-align: center;
+	#footer-logo{
+		text-align: center;
 
-	img{
-		width: 200px;
-		height: 200px;
-		object-fit: contain;
+		img{
+			width: 150px;
+			height: 150px;
+			object-fit: contain;
+		}
+	}
+
+	.policy a{
+		color: #999;
 	}
 }
+
+
 /*  ------  */
 
 
