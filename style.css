@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face{
+	src: url("fonts/Olympia Deco.ttf");
+	font-family: "Olympia";
+}
+
 /*-----------------*/
 :root{
 	--header-height: 80px;
@@ -18,6 +23,10 @@
 	font-family: "Montserrat";
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -28,8 +37,17 @@
   border: 0;
 }
 
-html{
-	scroll-behavior: smooth;
+.column-content{
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+}
+
+.row-content{
+	display: flex;
+	flex-direction: row;
+	gap: 60px;
+	justify-content: center;
 }
 
 header{
@@ -42,39 +60,39 @@ header{
 	position: sticky;
 	top: 0;
 	z-index: 999;
+
+	#header-logo{
+		max-width: 300px;
+		height: 100%;
+	}
+
+	#header-logo img{
+		height: 100%;
+	}
+
+	nav{
+		display: flex;
+		flex-grow: 2;
+		justify-content: flex-end;
+		gap: 20px;
+	}
+
+	nav a{
+		text-decoration: none;
+		color: #333;
+		padding: 20px 0;
+		transition:  0.5s;
+	}
+
+	nav a:hover{
+		color: blue;
+	}
 }
 
-#header-logo{
-	max-width: 300px;
-	height: 100%;
-}
-
-#header-logo img{
-	height: 100%;
-}
-
-nav{
-	display: flex;
-	flex-grow: 2;
-	justify-content: flex-end;
-	gap: 20px;
-}
-
-nav a{
-	text-decoration: none;
-	color: #333;
-	padding: 20px 0;
-	transition:  0.5s;
-}
-
-nav a:hover{
-	color: blue;
-}
 
 main{
 	position: relative;
 }
-
 
 
 #hero-section{
@@ -88,10 +106,11 @@ main{
 	.row-content{
 		height: 100%;
 		align-items: center;
+		gap: 0;
 	}
 
 	.column-content{
-		margin: 100px 0 0 10vw;
+		margin: 100px 4vw 0 10vw;
 		padding-bottom: 100px;
 		width: 50%;
 	}
@@ -107,7 +126,6 @@ main{
 			color: var(--button-hover-color);
 		}
 	}
-
 
 	.hero-section-image{
 		width: 50%;
@@ -133,7 +151,6 @@ main{
 		}
 	}
 
-
 	a{
 		display: block;
 		background: var(--button-color);
@@ -155,19 +172,6 @@ main{
 	}
 }
 
-
-
-
-/*main:before{
-	content: '';
-	position: absolute;
-	background: #000;
-	bottom: 0;
-	left: 0;
-	width: 50%;
-	height: 100px;
-	transform: skewX(90deg);
-}*/
 
 section{
 	padding: 100px 10vw;
@@ -195,227 +199,225 @@ section:nth-child(even){
 }
 
 
-#main-section{
+
+
+/*#main-section{
 	background: #ECE8E8;
 	padding: 100px 80px;
-}
 
-.column-content{
-	display: flex;
-	flex-direction: column;
-	row-gap: 40px;
-}
-
-.row-content{
-	display: flex;
-	flex-direction: row;
-	gap: 60px;
-	justify-content: center;
-
-}
-
-.wrap-content{
-	display: flex;
-	gap: 60px;
-}
-
-.left-wrap-content{
-	display: flex;
-	max-width: 45%;
-}
-
-.left-wrap-content h1{
-	font-size: 50px;
-	margin-bottom: 0;
-}
-
-.left-wrap-inner-content{
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	row-gap: inherit;
-	padding: 0 0 10px 30px;
-	border-left: 1px solid #000;
-	text-align: justify;
-}
-
-.left-wrap-inner-content:before{
-	content: '';
-	position: absolute;
-	width: 3px;
-	height: 3px;
-	background: #000;
-	border-radius: 50%;
-	top: -2px;
-	left: -2px;
-}
-
-.right-wrap-content-image{
-	width: 100%;
-	max-width: 640px;
-	display: flex;
-	flex-direction: column;	
-	justify-content: center;
-	position: relative;
-	overflow: hidden;
-}
-
-.right-wrap-content-image img{
-	width: 100%;
-}
-
-.right-wrap-content-image div{
-	position: absolute;
-	width: 75%;	
-}
-
-.right-wrap-content-image div:first-child{
-	transform: translate(-30%, 40%);
-	z-index: 1;	
-}
-
-.right-wrap-content-image div:last-child{
-	transform: translate(40%, 0%);
-}
-
-.about-us-description{
-	padding-bottom: 40px;
-	border-bottom: 1px solid #000;
-}
-
-.about-us-indicators{
-	justify-content: center;
-}
-
-.about-us-indicators div{
-	text-align: center;
-	width: 200px;
-}
-
-.about-us-indicators div p:first-child{
-	font-size: 30px;
-	font-weight: 600;
-}
-
-#courses .row-content{
-	flex-wrap: wrap;
-	gap: 20px;
-}
-
-.courses{
-	width: 30%;
-	background: #fee;
-	row-gap: 0;
-	border-radius: 25px;
-/*	padding-bottom: 30px;*/
-}
-
-.courses-image{
-	width: 100%;
-	height: 200px;
-	overflow: hidden;
-	border-radius: 25px 25px 0 0;
-}
-
-.courses-info{
-	padding: 30px;
-/*	text-align: center;*/
-}
-
-.courses-description{
-/*	padding: 30px;*/
-	font-size: 14px;
-	height: 300px;
-	overflow: hidden;
-	margin-bottom: 20px;
-	position: relative;
-/*	text-align: justify;*/
-}
-
-.courses-description:after{
-	content: '';
-	display: block;
-	width: 100%;
-	height: 100px;
-	background: #000;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background: linear-gradient(0deg, rgba(255,238,238,1) 0%, rgba(255,255,255,0) 100%);
-}
-
-.courses-description h2{
-	margin-bottom: 20px;
-	text-align: center;
-}
-
-.courses img{
-	width:  100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.button-read-more, .button-action{
-	cursor: pointer;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 10px;
-	background: var(--button-color);
-	color: #fff;
-	font-weight: 600;
-	font-size: 14px;
-	transition: 0.5s;
-	display: block;
-	margin: auto;
-}
-
-.button-action{
-	margin-top: 10px;
-	background: var(--button-hover-color);
-}
-
-.button-action:hover{
-	background: var(--button-action-hover-color);
-}
-
-.button-read-more:hover{
-	background: var(--button-action-hover-color);
-}
-
-/*	РАЗВЕРНУТОЕ ОПИСАНИЕ КУРСА  */
-
-.full-description{
-	width: 100%;
-	flex-grow: 2;
-	flex-direction: row;
-	order: -1;
-/*	transition: 0.8s;*/
-
-	/* -- ВАРИАНТ 1 */
-	.courses-image{
-		height: 100%;
-		flex-basis: 40%;
-		border-radius: 25px 0 0 25px;
+	.wrap-content{
+		display: flex;
+		gap: 60px;
 	}
 
-	/*  ВАРИАНТ 2 */
-	.courses-image{
-		height: 80%;
-		flex-basis: 500px;
-		border-radius: 25px;
+	.left-wrap-content{
+		display: flex;
+		max-width: 45%;
+	}
+
+	.left-wrap-content h1{
+		font-size: 50px;
+		margin-bottom: 0;
+	}
+
+	.left-wrap-inner-content{
 		position: relative;
-		top: 10%;
-		left: -50px;
-		box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+		display: flex;
+		flex-direction: column;
+		row-gap: inherit;
+		padding: 0 0 10px 30px;
+		border-left: 1px solid #000;
+		text-align: justify;
+	}
+
+	.left-wrap-inner-content:before{
+		content: '';
+		position: absolute;
+		width: 3px;
+		height: 3px;
+		background: #000;
+		border-radius: 50%;
+		top: -2px;
+		left: -2px;
+	}
+
+	.right-wrap-content-image{
+		width: 100%;
+		max-width: 640px;
+		display: flex;
+		flex-direction: column;	
+		justify-content: center;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.right-wrap-content-image img{
+		width: 100%;
+	}
+
+	.right-wrap-content-image div{
+		position: absolute;
+		width: 75%;	
+	}
+
+	.right-wrap-content-image div:first-child{
+		transform: translate(-30%, 40%);
+		z-index: 1;	
+	}
+
+	.right-wrap-content-image div:last-child{
+		transform: translate(40%, 0%);
+	}
+}*/
+
+
+/*  РАЗДЕЛ О НАС  */
+#about-us{
+	.about-us-description{
+		padding-bottom: 40px;
+		border-bottom: 1px solid #000;
+	}
+
+	.about-us-indicators{
+		justify-content: center;
+	}
+
+	.about-us-indicators div{
+		text-align: center;
+		width: 200px;
+	}
+
+	.about-us-indicators div p:first-child{
+		font-size: 30px;
+		font-weight: 600;
+	}
+}
+/* ------- */
+
+
+
+/*  РАЗДЕЛ КУРСОВ  */
+#courses{
+	.row-content{
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+
+	.courses{
+		width: 30%;
+		background: #fee;
+		row-gap: 0;
+		border-radius: 25px;
+	/*	padding-bottom: 30px;*/
+	}
+
+	.courses-image{
+		width: 100%;
+		height: 200px;
+		overflow: hidden;
+		border-radius: 25px 25px 0 0;
 	}
 
 	.courses-info{
-		flex-basis: 60%;
-		padding-left: 0;
+		padding: 30px;
+	/*	text-align: center;*/
+	}
+
+	.courses-description{
+	/*	padding: 30px;*/
+		font-size: 14px;
+		height: 300px;
+		overflow: hidden;
+		margin-bottom: 20px;
+		position: relative;
+	/*	text-align: justify;*/
 	}
 
 	.courses-description:after{
-		display: none;
+		content: '';
+		display: block;
+		width: 100%;
+		height: 100px;
+		background: #000;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background: linear-gradient(0deg, rgba(255,238,238,1) 0%, rgba(255,255,255,0) 100%);
+	}
+
+	.courses-description h2{
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.courses img{
+		width:  100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.button-read-more, .button-action{
+		cursor: pointer;
+		padding: 10px 20px;
+		border: none;
+		border-radius: 10px;
+		background: var(--button-color);
+		color: #fff;
+		font-weight: 600;
+		font-size: 14px;
+		transition: 0.5s;
+		display: block;
+		margin: auto;
+	}
+
+	.button-action{
+		margin-top: 10px;
+		background: var(--button-hover-color);
+	}
+
+	.button-action:hover{
+		background: var(--button-action-hover-color);
+	}
+
+	.button-read-more:hover{
+		background: var(--button-action-hover-color);
+	}
+
+	/*	РАЗВЕРНУТОЕ ОПИСАНИЕ КУРСА  */
+
+	.full-description{
+		width: 100%;
+		flex-grow: 2;
+		flex-direction: row;
+		order: -1;
+	/*	transition: 0.8s;*/
+
+		/* -- ВАРИАНТ 1 */
+		.courses-image{
+			height: 100%;
+			flex-basis: 40%;
+			border-radius: 25px 0 0 25px;
+		}
+
+		/*  ВАРИАНТ 2 */
+		.courses-image{
+			height: 80%;
+			flex-basis: 500px;
+			border-radius: 25px;
+			position: relative;
+			top: 10%;
+			left: -50px;
+			box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+		}
+
+		.courses-info{
+			flex-basis: 60%;
+			padding-left: 0;
+		}
+
+		.courses-description:after{
+			display: none;
+		}
 	}
 }
 /* ------------------ */
@@ -451,6 +453,57 @@ section:nth-child(even){
 	}
 }
 
+
+
+/*  РАЗДЕЛ ОТЗЫВОВ  */
+#reviews{
+	.row-content{
+		flex-wrap: wrap;
+		gap: 20px;
+
+	.review{
+		background: #fff9;
+		position: relative;
+		width: 30%;
+		border-radius: 20px;
+		box-shadow: 0 0 30px #0001;
+		float: left;
+
+		div:first-child{
+			padding: 40px;
+			text-align: center;
+			font-weight: 700;
+			font-size: 22px;
+			border-bottom: 1px dashed #888;
+			position: relative;
+		}
+		
+		div:last-child{
+			padding: 30px;
+			text-align: left;
+			position: relative;
+		}
+
+		div:first-child:after, div:last-child:after{
+			content: '"';
+			font-family: "Olympia";
+			font-size: 100px;
+			position: absolute;
+			bottom: -80px;
+			font-weight: 700;
+			color: var(--button-color);
+		}
+
+		div:first-child:after{
+			left: 20px;
+		}
+
+		div:last-child:after{
+			right: 20px;
+		}
+	}
+}
+/* ------  */
 
 
 
@@ -546,6 +599,7 @@ section:nth-child(even){
 /*  ФУТЕР  */
 footer{
 	padding: 50px 50px 20px;
+	background: url("images/bg.svg") no-repeat center / cover;
 
 	.row-content{
 		align-items: center;
