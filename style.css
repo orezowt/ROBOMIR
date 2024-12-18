@@ -7,6 +7,8 @@
 	--section-odd-color: #ECE8E8;
 	--button-color: #00BFFF;
 	--button-hover-color: #1E90FF;
+	--button-action-color: #0081A6;
+	--button-action-hover-color: #4065FF;
 }
 
 *{
@@ -367,8 +369,17 @@ section:nth-child(even){
 	margin: auto;
 }
 
-.button-read-more:hover{
+.button-action{
+	margin-top: 10px;
 	background: var(--button-hover-color);
+}
+
+.button-action:hover{
+	background: var(--button-action-hover-color);
+}
+
+.button-read-more:hover{
+	background: var(--button-action-hover-color);
 }
 
 /*	РАЗВЕРНУТОЕ ОПИСАНИЕ КУРСА  */
@@ -479,7 +490,7 @@ section:nth-child(even){
 	}
 
 	textarea{
-		min-height: 200px;
+		min-height: 100px;
 	}
 
 	textarea::-webkit-scrollbar{
@@ -547,6 +558,11 @@ footer{
 	.footer-contacts{
 		row-gap: 10px;
 		align-items: flex-end;
+
+		a{
+			text-decoration: none;
+			color: blue;
+		}
 	}
 
 	div{
@@ -563,8 +579,13 @@ footer{
 		}
 	}
 
-	.policy a{
+	#policy{
+		gap: 20px;
+	}
+
+	#policy a{
 		color: #999;
+		text-decoration: none;
 	}
 }
 
