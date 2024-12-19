@@ -460,6 +460,7 @@ section:nth-child(even){
 	.row-content{
 		flex-wrap: wrap;
 		gap: 20px;
+	}
 
 	.review{
 		background: #fff9;
