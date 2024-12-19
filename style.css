@@ -457,9 +457,12 @@ section:nth-child(even){
 
 /*  РАЗДЕЛ ОТЗЫВОВ  */
 #reviews{
+
 	.row-content{
 		flex-wrap: wrap;
 		gap: 20px;
+		width: 100%;
+		justify-content: flex-start;
 	}
 
 	.review{
@@ -468,7 +471,6 @@ section:nth-child(even){
 		width: 30%;
 		border-radius: 20px;
 		box-shadow: 0 0 30px #0001;
-		float: left;
 
 		div:first-child{
 			padding: 40px;
