@@ -55,7 +55,7 @@ header{
 	background: #fee;
 	display: flex;
 	align-items: center;
-	padding: 0 40px;
+	padding: 0 20px;
 	gap: 40px;
 	position: sticky;
 	top: 0;
@@ -75,6 +75,7 @@ header{
 		flex-grow: 2;
 		justify-content: flex-end;
 		gap: 20px;
+		align-items: center;
 	}
 
 	nav a{
@@ -82,6 +83,28 @@ header{
 		color: #333;
 		padding: 20px 0;
 		transition:  0.5s;
+	}
+
+	nav button{
+		background: var(--button-color);
+		border: none;
+		padding: 10px 20px;
+		border-radius: 25px;
+		transition: 0.5s;
+
+		a{
+			color: #fff;
+			font-weight: 600;
+			padding: 0;
+		}
+
+		a:hover{
+			color: #fff;
+		}
+	}
+
+	nav button:hover{
+		background: var(--button-hover-color);
 	}
 
 	nav a:hover{
