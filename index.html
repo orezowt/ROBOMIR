@@ -30,29 +30,28 @@
 			<a href="#courses">Курсы</a>
 			<a href="#contacts">Контакты</a>
 			<a href="#reviews">Отзывы</a>
-			<button><a href="">Бесплатный урок</a></button>
+			<button data-modal>Бесплатный урок</button>
 		</nav>
 	</header>
 
 
-	<div id="modal">
-		<div id="modal-content">
-			<button id="close">X</button>
+	<div id="modal-shadow" class="modal-invisible"></div>
+	<div id="modal-content" class="modal-invisible">
+		<button id="button-close">X</button>
 
-			<div class="row-content">
-				<div class="column-content">
-					<h1>Запишитесь на <span>бесплатное занятие</span></h1>
-					<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione architecto commodi consectetur deserunt corrupti vitae est, necessitatibus pariatur, adipisci.</p>
-				</div>
+		<div class="row-content">
+			<div class="column-content">
+				<h1>Запишитесь на <span>бесплатное занятие</span></h1>
+				<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione architecto commodi consectetur deserunt corrupti vitae est, necessitatibus pariatur, adipisci.</p>
+			</div>
 
-				<div class="column-content">
-					<form action="">
-						<input type="text" name="name" placeholder="Имя">
-						<input type="tel" name="phone" placeholder="Телефон">
-						<input type="email" name="email" placeholder="Эл. почта">
-						<input type="submit" value="Оставить заявку">
-					</form>
-				</div>
+			<div class="column-content">
+				<form action="">
+					<input type="text" name="name" placeholder="Имя" required>
+					<input type="tel" name="phone" placeholder="Телефон" required>
+					<input type="email" name="email" placeholder="Эл. почта">
+					<input type="submit" value="Оставить заявку">
+				</form>
 			</div>
 		</div>
 	</div>
@@ -68,7 +67,7 @@
 
 					<div class="row-content hero-buttons">
 						<a href="#about-us">Узнать больше</a>
-						<a href="#courses">Бесплатный урок</a>
+						<a  data-modal>Бесплатный урок</a>
 					</div>
 				</div>
 
@@ -364,6 +363,7 @@
 	<script src="js/slider.js"></script>
 	<script src="js/reviews-slider.js"></script>
 	<script src="js/masked_input.js"></script>
+	<script src="js/modal-window.js"></script>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
