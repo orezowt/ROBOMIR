@@ -68,6 +68,17 @@ header{
 	top: 0;
 	z-index: 90;
 
+	.mb-header-title{
+		display: none;
+		font-size: 4rem;
+/*		font-weight: 800;	*/
+
+		span{
+			display: block;
+			font-size: 1.6rem;
+		}
+	}
+
 	.row-content{
 		align-items: center;
 		gap: 20px;
@@ -98,6 +109,8 @@ header{
 		gap: 20px;
 		align-items: center;
 		font-size: 1.6rem;
+
+/*		display: none;*/
 	}
 
 	nav a{
@@ -107,7 +120,7 @@ header{
 		transition:  0.5s;
 	}
 
-	nav button{
+	button[data-modal]{
 		background: var(--button-color);
 		border: none;
 		padding: 10px 20px !important;
@@ -119,12 +132,26 @@ header{
 		font-size: 1.6rem;
 	}
 
-	nav button:hover{
+	button[data-modal]:hover{
 		background: var(--button-hover-color);
 	}
 
 	nav a:hover{
 		color: blue;
+	}
+
+	#mb-nav-menu{
+		display: none;
+
+/*		display: flex;*/
+		gap: 20px;
+
+		#mb-button-menu{
+			width: 50px;
+			height: 50px;
+			border: none;
+			background: url("images/icons/menu.png") no-repeat center / contain;
+		}
 	}
 }
 
@@ -315,12 +342,12 @@ main{
 		display: block;
 		background: var(--button-color);
 		padding: 15px 25px;
-		max-height: 50px;
 		border-radius: 25px;
 		text-decoration: none;
 		color: #fff;
 		font-weight: 600;
 		transition: 0.3s;
+		text-align: center;
 	}
 
 	a:hover{
@@ -459,7 +486,7 @@ section:nth-child(even){
 		background: var(--button-color);
 		color: #fff;
 		font-weight: 600;
-		font-size: 14px;
+		font-size: 1.4rem;
 		transition: 0.5s;
 		display: block;
 		margin: auto;
@@ -799,22 +826,83 @@ footer{
 
 /* БОЛЬШИЕ МОНИТОРЫ */
 @media (min-width: 1200px) {
-
+	html{
+		font-size: 62.5%;
+	}
 }
 
 /* СРЕДНИЕ МОНИТОРЫ */
 @media (min-width: 992px) and (max-width: 1199px) {
-
+	html{
+		font-size: 62.5%;
+	}
+/*
+	.header-title h1:first-child{
+		font-size: 3vw;
+	}*/
 }
 
 /* МАЛЕНЬКИЕ МОНИТОРЫ */
 @media (min-width: 768px) and (max-width: 991px) {
+	html{
+			font-size: 50%;
+	}
+
+	section{
+		padding: 80px 5vw;
+	}
+
+	header{
+		gap:20px;
+
+		nav{
+			gap: 10px;
+		}
+
+		.row-content{
+			display: none;
+		}
+
+		.mb-header-title{
+			display: block;
+			font-size: 4vw;
+
+			span{
+				font-size: 1.5vw;
+			}
+		}
+	}
+
 
 }
 
 /* ПЛАНШЕТЫ И АЛЬБОМНАЯ ОРИЕНТАЦИЯ ТЕЛЕФОНОВ */
 @media (max-width: 767px) {
+	html{
+			font-size: 40%;
+	}
 
+	header{
+		gap: 10px;
+
+		nav{
+			gap: 10px;
+			display: none;
+		}
+
+		.header-title{
+			display: none;
+		}
+
+		.mb-header-title{
+			display: block;
+			font-size: 4vw;
+
+			span{
+				font-size: 1.5vw;
+			}
+		}
+	}
 }
 
 /* Landscape phones and smaller */

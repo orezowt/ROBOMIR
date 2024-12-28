@@ -17,13 +17,13 @@
 <body>
 	<header>
 		<div id="header-logo">
-			<img src="images/logo.jpg" alt="">
+			<img src="images/logo.jpg" alt="Логотип РОБОМИР">
 		</div>
-		<div class="row-content">
-			<!-- <h1>РОБОМИР<span>Детский центр от 4 до 16 лет</span></h1> -->
+		<div class="row-content header-title">
 			<h1>РОБОМИР</h1>
 			<h1>Детский центр<br>от 4 до 16 лет</h1>
 		</div>
+		<h1 class="mb-header-title">РОБОМИР<span>Детский центр от 4 до 16 лет</span></h1>
 
 		<nav>
 			<a href="#about-us">О нас</a>
@@ -32,6 +32,25 @@
 			<a href="#reviews">Отзывы</a>
 			<button data-modal>Бесплатный урок</button>
 		</nav>
+
+		<div id="mb-nav-menu">
+			<button data-modal>Бесплатный урок</button>
+			<button id="mb-button-menu" aria-expanded="false" aria-controls="list"></button>
+			<ul class="menu" id="list" aria-hidden="true">
+				<li class="menu-item">
+					<a href="#about-us" class="menu-link">О нас</a>
+				</li>
+				<li class="menu-item">
+					<a href="#courses" class="menu-link">Курсы</a>
+				</li>
+				<li class="menu-item">
+					<a href="#contacts" class="menu-link">Контакты</a>
+				</li>
+				<li class="menu-item">
+					<a href="#reviews" class="menu-link">Отзывы</a>
+				</li>
+			</ul>
+		</div>
 	</header>
 
 
