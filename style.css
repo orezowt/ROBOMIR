@@ -63,7 +63,7 @@ header{
 	display: flex;
 	align-items: center;
 	padding: 0 20px;
-	gap: 40px;
+	gap: 20px;
 	position: sticky;
 	top: 0;
 	z-index: 90;
@@ -87,6 +87,7 @@ header{
 	#header-logo{
 		max-width: 300px;
 		height: 100%;
+		margin-left: -10px;
 	}
 
 	#header-logo img{
@@ -456,7 +457,7 @@ section:nth-child(even){
 
 		p{
 			font-size: 1.6rem;
-			text-align: left;
+			text-align: justify;
 		}
 	}
 
@@ -822,14 +823,44 @@ footer{
 
 
 
+
+
 /*  АДАПТИВНОСТЬ ЭЛЕМЕНТОВ  */
 
 /* БОЛЬШИЕ МОНИТОРЫ */
-@media (min-width: 1200px) {
+@media (min-width: 1281px) {
 	html{
 		font-size: 62.5%;
 	}
+
+	#courses{
+		.courses{
+			width: 400px;
+		}
+	}
 }
+
+@media (max-width: 1060px){
+	header{
+		nav{
+			gap: 10px;
+		}
+
+		.row-content{
+			display: none;
+		}
+
+		.mb-header-title{
+			display: block;
+			font-size: 4vw;
+
+			span{
+				font-size: 1.5vw;
+			}
+		}
+	}
+}
+
 
 /* СРЕДНИЕ МОНИТОРЫ */
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -840,7 +871,11 @@ footer{
 	.header-title h1:first-child{
 		font-size: 3vw;
 	}*/
+
+	
 }
+
+
 
 /* МАЛЕНЬКИЕ МОНИТОРЫ */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -853,8 +888,6 @@ footer{
 	}
 
 	header{
-		gap:20px;
-
 		nav{
 			gap: 10px;
 		}
@@ -873,13 +906,21 @@ footer{
 		}
 	}
 
+	#courses{
+		.courses{
+			width: 45%;
+		}
+	}
+
 
 }
+
+
 
 /* ПЛАНШЕТЫ И АЛЬБОМНАЯ ОРИЕНТАЦИЯ ТЕЛЕФОНОВ */
 @media (max-width: 767px) {
 	html{
-			font-size: 40%;
+			font-size: 50%;
 	}
 
 	header{
@@ -897,15 +938,51 @@ footer{
 		.mb-header-title{
 			display: block;
 			font-size: 4vw;
+			font-size: 4rem;
 
 			span{
-				font-size: 1.5vw;
+				font-size: 1.5rem;
 			}
+		}
+	}
+
+	section{
+		padding: 60px 5vw;
+	}
+
+	.about-us-indicators{
+		flex-wrap: wrap;
+		row-gap: 20px;
+		gap: 20px;
+
+		div{
+			width: 150px !important;
+		}
+	}
+
+	#courses{
+		.courses{
+			width: 45%;
 		}
 	}
 }
 
-/* Landscape phones and smaller */
-@media (max-width: 480px) {
 
+
+@media (max-width: 480px) {
+	.mb-header-title{
+			display: block;
+			font-size: 6vw !important;
+
+			span{
+				font-size: 2.5vw !important;
+			}
+		}
+
+
+	#courses{
+		.courses{
+			width: 100%;
+		}
+	}
 }
