@@ -146,12 +146,30 @@ header{
 
 /*		display: flex;*/
 		gap: 20px;
+		width: 100%;
+		justify-content: flex-end;
 
 		#mb-button-menu{
 			width: 50px;
 			height: 50px;
 			border: none;
 			background: url("images/icons/menu.png") no-repeat center / contain;
+			background-size: 80%;
+		}
+
+		.menu{
+			text-align: center;
+    display: block;
+    position: absolute;
+    bottom: -60px;
+    width: 100%;
+    left: 0;
+    background: #fee;
+		}
+
+		.menu-item{
+			padding: 10px;
+			font-size: 3rem;
 		}
 	}
 }
@@ -977,7 +995,32 @@ footer{
 			span{
 				font-size: 2.5vw !important;
 			}
+	}
+
+
+	#hero-section{
+		min-height: 100vh;
+	
+		.hero-section-image{
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			width: 100%;
 		}
+
+		.hero-section-content{
+			width: 100%;
+			height: 100%;
+			background: #fff8;
+			z-index: 4;
+			padding: 100px 4vw 0 10vw;
+			margin: 0;
+		}
+
+		.hero-buttons{
+			align-items: flex-start;
+		}
+	}
 
 
 	#courses{
@@ -986,3 +1029,6 @@ footer{
 		}
 	}
 }
+
+
+
