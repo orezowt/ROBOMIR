@@ -52,17 +52,16 @@
 	</header>
 
 
-	<div id="modal-shadow" class="modal-invisible"></div>
-	<div id="modal-content" class="modal-invisible">
-		<button id="button-close">X</button>
-
-		<div class="row-content">
-			<div class="column-content">
+	<!-- ФОРМА ЗАЯВКИ -->
+	<dialog class="modal" id="modal-registration">
+		<div class="modal-wrapper row-content">
+			<button id="modal-button-close">X</button>
+			<div class="column-content modal-content">
 				<h1>Запишитесь на <span>бесплатное занятие</span></h1>
 				<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Maiores ratione architecto commodi consectetur deserunt corrupti vitae est, necessitatibus pariatur, adipisci.</p>
 			</div>
 
-			<div class="column-content">
+			<div class="column-content modal-form">
 				<form action="">
 					<input type="text" name="name" placeholder="Имя" required>
 					<input type="tel" name="phone" placeholder="Телефон" required>
@@ -71,7 +70,7 @@
 				</form>
 			</div>
 		</div>
-	</div>
+	</dialog>
 
 
 	<main>
@@ -370,7 +369,8 @@
 	<script src="js/slider.js"></script>
 	<script src="js/reviews-slider.js"></script>
 	<script src="js/masked_input.js"></script>
-	<script src="js/modal-window.js"></script>
+	<!-- <script src="js/modal-window.js"></script> -->
+	<script src="js/modal.js"></script>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>

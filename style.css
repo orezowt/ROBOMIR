@@ -26,6 +26,11 @@
 html{
 	scroll-behavior: smooth;
 	font-size: 62.5%;
+/*	scrollbar-gutter: stable;*/
+}
+
+body{
+	scrollbar-gutter: stable;
 }
 
 p{
@@ -195,35 +200,44 @@ header{
 }
 
 /* ОКНО ЗАЯВКИ */
-#modal-shadow{
-	position: fixed;
-	inset: 0;
-	background: #000;
-	z-index: 99;
+
+
+
+
+.scroll-lock{
+	overflow: hidden;
 }
 
-#modal-content{
+dialog::backdrop{
+	background: #0009;
+}
+
+.modal{
 	width: 90%;
 	height: 90%;
 	position: fixed;
 	top: 5%;
 	left: 5%;
 	background: url("images/bg.svg") no-repeat center / cover;
-	padding: 80px;
 	border-radius: 25px;
+	border: none;
 	z-index: 100;
-	opacity: 1;
+	opacity: 1;	
+
+	.modal-wrapper{
+		padding: 80px;
+	}
 
 	.row-content{
 		height: 100%;
 		align-items: center;
 	}
-
-	.column-content:first-child{
+	
+	.modal-content{
 		flex-basis: 60%;
 	}
 
-	.column-content:last-child{
+	.modal-form{
 		flex-basis: 40%;
 	}	
 
