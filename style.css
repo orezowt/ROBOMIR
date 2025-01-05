@@ -29,9 +29,6 @@ html{
 /*	scrollbar-gutter: stable;*/
 }
 
-body{
-	scrollbar-gutter: stable;
-}
 
 p{
 	font-size: 1.8rem;
@@ -180,44 +177,25 @@ header{
 }
 
 
-.modal-invisible{
-	visibility: hidden;
-	opacity: 0;
-	transition: 0s;
-}
 
-.modal-visible{
-	visibility: visible;
-	opacity: 0.7;
-	transition: 0.3s;
-}
-
-.modal-opened{
-	position: fixed;
-	right: 0;
-	left: 0;
-	overflow: hidden;
-}
 
 /* ОКНО ЗАЯВКИ */
-
-
-
-
 .scroll-lock{
 	overflow: hidden;
 }
 
 dialog::backdrop{
-	background: #0009;
+	background: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(4px);
 }
 
 .modal{
-	width: 90%;
-	height: 90%;
+	width: 85%;
+	height: 85%;
 	position: fixed;
-	top: 5%;
-	left: 5%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background: url("images/bg.svg") no-repeat center / cover;
 	border-radius: 25px;
 	border: none;
@@ -225,12 +203,13 @@ dialog::backdrop{
 	opacity: 1;	
 
 	.modal-wrapper{
-		padding: 80px;
+		padding: 80px 60px;
 	}
 
 	.row-content{
 		height: 100%;
 		align-items: center;
+		gap: 30px;
 	}
 	
 	.modal-content{
@@ -268,10 +247,10 @@ dialog::backdrop{
 	}
 
 	p{
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 
-	input{
+	input, select{
 		width: 100%;
 		margin-bottom: 10px;
 		padding: 20px;

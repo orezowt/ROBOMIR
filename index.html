@@ -15,7 +15,8 @@
 <body>
 	<header>
 		<div id="header-logo">
-			<img src="images/logo.jpg" alt="Логотип РОБОМИР">
+			<img src="images/logo_mini.svg" alt="Логотип РОБОМИР">
+			<!-- <img src="images/logo.jpg" alt="Логотип РОБОМИР"> -->
 		</div>
 		<div class="row-content header-title">
 			<h1>РОБОМИР</h1>
@@ -66,6 +67,19 @@
 					<input type="text" name="name" placeholder="Имя" required>
 					<input type="tel" name="phone" placeholder="Телефон" required>
 					<input type="email" name="email" placeholder="Эл. почта">
+					<select name="course" id="course-select">
+						<optgroup label="От 6 до 10 лет">
+							<option value="">Базовое программирование</option>
+						</optgroup>
+						
+						<optgroup label="От 8 до 12 лет">
+							<option value="">Робототехника Arduino</option>
+							<option value="">WEB разработка</option>
+							<option value="">Программирование на Python</option>
+							<option value="">3D моделирование</option>
+							<option value="">Разработка игр на Unity</option>
+						</optgroup>
+					</select>
 					<input type="submit" value="Оставить заявку">
 				</form>
 			</div>
@@ -345,7 +359,7 @@
 				</div>
 
 				<div id="footer-logo">
-					<img src="images/logo.jpg" alt="">
+					<img src="images/logo.svg" alt="">
 				</div>
 
 				<div>
@@ -369,8 +383,7 @@
 	<script src="js/slider.js"></script>
 	<script src="js/reviews-slider.js"></script>
 	<script src="js/masked_input.js"></script>
-	<!-- <script src="js/modal-window.js"></script> -->
-	<script src="js/modal.js"></script>
+	<script src="js/modal-window.js"></script>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
