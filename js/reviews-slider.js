@@ -6,7 +6,7 @@ $(document).ready(function(){
     dots: true,
     responsive: [
     {
-      breakpoint: 1281,
+      breakpoint: 1367,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
