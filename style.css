@@ -522,9 +522,18 @@ section:nth-child(even){
 	}
 
 	/*	РАЗВЕРНУТОЕ ОПИСАНИЕ КУРСА  */
+	.mb-full-description{
+		.courses-description{
+			height: auto;
+		}
+
+		.courses-description:after{
+			display: none;
+		}
+	}
 
 	.full-description{
-		width: 100%;
+		width: 100% !important;
 		flex-grow: 2;
 		flex-direction: row;
 		order: -1;
@@ -884,11 +893,13 @@ footer{
 	html{
 		font-size: 62.5%;
 	}
-/*
+/* 	
 	.header-title h1:first-child{
 		font-size: 3vw;
 	}*/
-
+	.courses{
+		width: 300px;
+	}
 	
 }
 
@@ -1013,6 +1024,13 @@ footer{
 	}
 }
 
+@media (max-width: 601px){
+	#courses{
+		.courses{
+			width: 80%;
+		}
+	}
+}
 
 
 @media (max-width: 480px) {
@@ -1065,7 +1083,7 @@ footer{
 			top: 1%;
 			right: 2%;
 		}
-		
+
 		.modal-title{
 			font-size: 3rem;
 		}
