@@ -10,7 +10,8 @@
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/mobile.css">
 
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
@@ -26,9 +27,9 @@
 		</div>
 		<div class="row-content header-title">
 			<h1>РОБОМИР</h1>
-			<h1>Детский центр<br>от 4 до 16 лет</h1>
+			<h2>Детский центр<br>от 4 до 16 лет</h2>
 		</div>
-		<h1 class="mb-header-title">РОБОМИР<span>Детский центр от 4 до 16 лет</span></h1>
+		<h2 class="mb-header-title">РОБОМИР<span>Детский центр от 4 до 16 лет</span></h2>
 
 		<nav>
 			<a href="#about-us">О нас</a>
@@ -70,7 +71,7 @@
 
 			<div class="column-content modal-form">
 				<form action="">
-					<input type="text" name="name" placeholder="Имя" required>
+					<input type="text" name="name" id="name" placeholder="Имя" required>
 					<input type="tel" name="phone" placeholder="Телефон" required>
 					<input type="email" name="email" placeholder="Эл. почта">
 					<select name="course" id="course-select">
@@ -80,11 +81,12 @@
 						</optgroup>
 						
 						<optgroup label="От 8 до 12 лет">
-							<option value="">Робототехника Arduino</option>
-							<option value="">WEB разработка</option>
-							<option value="">Программирование на Python</option>
-							<option value="">3D моделирование</option>
-							<option value="">Разработка игр на Unity</option>
+							<option value="Arduino">Робототехника Arduino</option>
+							<option value="WEB">WEB разработка</option>
+							<option value="Python">Программирование на Python</option>
+							<option value="Harvard">Гарвардский курс</option>
+							<option value="Modeling">3D моделирование</option>
+							<option value="Unity">Разработка игр на Unity</option>
 						</optgroup>
 					</select>
 					<input type="submit" value="Оставить заявку">
@@ -104,7 +106,7 @@
 
 					<div class="row-content hero-buttons">
 						<a href="#about-us">Узнать больше</a>
-						<a  data-modal>Бесплатный урок</a>
+						<a data-modal>Бесплатный урок</a>
 					</div>
 				</div>
 
@@ -166,7 +168,7 @@
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum a, reprehenderit tempora suscipit ab minima, vero soluta labore modi cupiditate corrupti perferendis exercitationem. Eos optio nihil maxime ipsam earum eveniet laudantium quibusdam quo exercitationem itaque distinctio dignissimos voluptatibus rem, nulla odit accusamus officiis molestiae sed voluptatum totam repellat fugit.</p>
 						</div>
 						<button class="button-read-more">Узнать больше</button>
-						<button class="button-action" data-modal>Бесплатный урок</button>
+						<button class="button-action" data-course="Arduino" data-modal>Бесплатный урок</button>
 					</div>
 				</div>
 
@@ -182,6 +184,7 @@
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum a, reprehenderit tempora suscipit ab minima, vero soluta labore modi cupiditate corrupti perferendis exercitationem. Eos optio nihil maxime ipsam earum eveniet laudantium quibusdam quo exercitationem itaque distinctio dignissimos voluptatibus rem, nulla odit accusamus officiis molestiae sed voluptatum totam repellat fugit.</p>
 						</div>
 						<button class="button-read-more">Узнать больше</button>
+						<button class="button-action" data-course="Harvard" data-modal>Бесплатный урок</button>
 					</div>
 				</div>
 
@@ -197,6 +200,7 @@
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum a, reprehenderit tempora suscipit ab minima, vero soluta labore modi cupiditate corrupti perferendis exercitationem. Eos optio nihil maxime ipsam earum eveniet laudantium quibusdam quo exercitationem itaque distinctio dignissimos voluptatibus rem, nulla odit accusamus officiis molestiae sed voluptatum totam repellat fugit.</p>
 						</div>
 						<button class="button-read-more">Узнать больше</button>
+						<button class="button-action" data-course="WEB" data-modal>Бесплатный урок</button>
 					</div>
 				</div>
 
@@ -211,6 +215,7 @@
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum a, reprehenderit tempora suscipit ab minima, vero soluta labore modi cupiditate corrupti perferendis exercitationem. Eos optio nihil maxime ipsam earum eveniet laudantium quibusdam quo exercitationem itaque distinctio dignissimos voluptatibus rem, nulla odit accusamus officiis molestiae sed voluptatum totam repellat fugit.</p>
 						</div>
 						<button class="button-read-more">Узнать больше</button>
+						<button class="button-action" data-course="Python" data-modal>Бесплатный урок</button>
 					</div>
 				</div>
 
@@ -226,6 +231,22 @@
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum a, reprehenderit tempora suscipit ab minima, vero soluta labore modi cupiditate corrupti perferendis exercitationem. Eos optio nihil maxime ipsam earum eveniet laudantium quibusdam quo exercitationem itaque distinctio dignissimos voluptatibus rem, nulla odit accusamus officiis molestiae sed voluptatum totam repellat fugit.</p>
 						</div>
 						<button class="button-read-more">Узнать больше</button>
+						<button class="button-action" data-course="Modeling" data-modal>Бесплатный урок</button>
+					</div>
+				</div>
+
+				<div class="courses column-content">
+					<div class="courses-image">
+						<img src="images/1.jpg" alt="">
+					</div>
+					<div class="courses-info">
+						<div class="courses-description">
+							<h2>Разработка игр на Unity</h2>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo deleniti accusantium et tenetur. Blanditiis dignissimos nesciunt consequuntur perferendis commodi dolorem necessitatibus repudiandae unde reiciendis minus recusandae debitis tempora quo rem natus, porro ad aliquid officia laudantium nam? Neque laborum, dolorum.</p>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam earum a, reprehenderit tempora suscipit ab minima, vero soluta labore modi cupiditate corrupti perferendis exercitationem. Eos optio nihil maxime ipsam earum eveniet laudantium quibusdam quo exercitationem itaque distinctio dignissimos voluptatibus rem, nulla odit accusamus officiis molestiae sed voluptatum totam repellat fugit.</p>
+						</div>
+						<button class="button-read-more">Узнать больше</button>
+						<button class="button-action" data-course="Unity" data-modal>Бесплатный урок</button>
 					</div>
 				</div>
 				
@@ -334,7 +355,7 @@
 
 
 		<section id="feedback">
-			<h1>Остались вопросы?</h1>
+			<h2>Остались вопросы?</h2>
 			<h3>Оставьте заявку и мы с Вами свяжемся!</h3>
 
 			<form action="" class="column-content">

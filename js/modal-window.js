@@ -16,10 +16,13 @@ function returnScroll(){
 	document.body.classList.remove('scroll-lock')
 }
 
-function open(){
+function open(course){
 	scrollPosition = window.pageYOffset;
 	html.style.top = -scrollPosition + "px";
 	modal.showModal()
+	if (course != null){
+		modal.querySelector(`option[value=${course}]`).setAttribute('selected', true)
+	}
 	document.body.classList.add('scroll-lock')
 }
 
@@ -29,6 +32,7 @@ function close(){
 	html.style.top = ""
 	modal.close()
 	returnScroll()
+	modal.querySelector('option[selected]').removeAttribute('selected')
 }
 
 modal.addEventListener('click', closeOnBackDropClick)
@@ -36,7 +40,10 @@ modal.addEventListener('cancel', (event)=>{
 	returnScroll()
 })
 btns_modal.forEach(function(button){
-	button.onclick = open
+	button.onclick = function(){
+		let course = button.getAttribute("data-course")
+		open(course)
+	}
 })
 
 btn_close.addEventListener('click', (event)=>{

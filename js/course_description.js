@@ -37,7 +37,7 @@ btns.forEach(function(button){
 	button.onclick = function(){
 		let screen_width = window.innerWidth
 
-		if (screen_width < 600){
+		if (screen_width <= 600){
 			switch_view(button, "mb-full-description")
 		}
 		else{
