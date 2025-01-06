@@ -1,7 +1,7 @@
 let btns_modal = document.querySelectorAll('*[data-modal]')
 let modal = document.querySelector('#modal-registration')
 let btn_close = document.querySelector("#modal-button-close")
-let html = document.documentElement;
+let html = document.documentElement
 let scrollPosition
 
 function closeOnBackDropClick({currentTarget, target}){

@@ -191,7 +191,7 @@ dialog::backdrop{
 
 .modal{
 	width: 85%;
-	height: 85%;
+/*	height: 85%;*/
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -224,8 +224,8 @@ dialog::backdrop{
 		position: absolute;
 		width: 40px;
 		height: 40px;
-		top: 30px;
-		right: 30px;
+		top: 5%;
+		right: 2%;
 		background: #333;
 		color: #fff;
 		border-radius: 50%;
@@ -238,8 +238,10 @@ dialog::backdrop{
 		background: #000;
 	}
 
-	h1{
-		font-size: 40px;
+	.modal-title{
+		font-size: 4rem;
+		font-weight: 800;
+		line-height: normal;
 
 		span{
 			color: var(--button-hover-color);
@@ -267,7 +269,7 @@ dialog::backdrop{
 		background: var(--button-color);
 		color: #fff;
 		transition: background 0.5s;
-		font-size: 20px;
+		font-size: 2rem;
 		font-weight: 600;
 		border: none;
 	}
@@ -960,6 +962,36 @@ footer{
 		}
 	}
 
+	/* ОКНО ЗАЯВКИ	*/
+	.modal{
+		.modal-wrapper{
+			flex-direction: column;
+			padding: 40px;
+			row-gap: 10px;
+		}
+
+		.modal-content{
+			row-gap: 20px;
+		}
+
+		.modal-form{
+			form{
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: center;
+			}
+
+			input, select{
+				width: 48%;
+			}
+
+			input[type="submit"]{
+				width: auto;
+			}
+		}
+	}
+
 	section{
 		padding: 60px 5vw;
 	}
@@ -1026,6 +1058,39 @@ footer{
 			align-items: flex-start;
 		}
 	}
+
+	/* ФОРМА ЗАЯВКИ	*/
+	.modal{
+		button{
+			top: 1%;
+			right: 2%;
+		}
+		
+		.modal-title{
+			font-size: 3rem;
+		}
+
+		.modal-content{
+			text-align: center;
+		}
+
+		.modal-form{
+			form{
+				gap: 0;
+			}
+
+			input, select{
+				width: 100% !important;
+			}
+
+			select, input:not(input[type='submit']){
+				padding: 15px 20px;
+			}
+		}
+
+		
+	}
+
 
 	/* РАЗДЕЛ С КУРСАМИ	*/
 	#courses{
