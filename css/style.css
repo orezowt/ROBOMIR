@@ -167,13 +167,6 @@ header{
 		font-size: 1.6rem;
 	}
 
-	button[data-modal]:hover{
-		background: var(--button-hover-color);
-	}
-
-	nav a:hover{
-		color: blue;
-	}
 
 	#mb-nav-menu{
 		display: none;
@@ -267,7 +260,7 @@ dialog::backdrop{
 		    flex-basis: 40%;
 	}	
 
-	button{
+	#modal-button-close{
 		position: absolute;
 		width: 40px;
 		height: 40px;
@@ -283,7 +276,7 @@ dialog::backdrop{
 		font-weight: bold;
 	}
 
-	button:hover{
+	#modal-button-close:hover{
 		background: #000;
 	}
 
@@ -325,12 +318,8 @@ dialog::backdrop{
 		border: none;
 	}
 
-	input[type="submit"]:hover{
-		background: var(--button-hover-color);
-	}
-
 	input:focus{
-		background-color: #fff;
+/*		background-color: #fff;*/
 		border-color: #bdbdbd;
 		outline: 0;
 		-webkit-box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
@@ -420,10 +409,6 @@ main{
 		-o-transition: 0.3s;
 		transition: 0.3s;
 		text-align: center;
-	}
-
-	a:hover{
-		background: var(--button-hover-color);
 	}
 
 	.hero-buttons{
@@ -578,13 +563,6 @@ section:nth-child(even){
 		background: var(--button-hover-color);
 	}
 
-	.button-action:hover{
-		background: var(--button-action-hover-color);
-	}
-
-	.button-read-more:hover{
-		background: var(--button-hover-color);
-	}
 
 	/*	РАЗВЕРНУТОЕ ОПИСАНИЕ КУРСА  */
 	.mb-full-description{
@@ -844,21 +822,6 @@ section:nth-child(even){
 		transition: 0.5s;
 		font-size: 1.6rem;
 	}
-
-	input[type="submit"]:hover{
-		background: var(--button-hover-color);
-	}
-
-	input[name="name"]::after{
-		content: '*';
-		display: block;
-		position: absolute;
-		right: -20px;
-		top: 0;
-		width: 20px;
-		height: 20px;
-		z-index: 99;
-	}
 	
 }
 /*  --------------------- */
@@ -927,7 +890,33 @@ footer{
 
 
 /*  ------  */
+@media(hover:hover){
+	input[type="submit"]:hover{
+		background: var(--button-hover-color);
+	}
 
+	button[data-modal]:hover{
+		background: var(--button-hover-color);
+	}
+
+	nav a:hover, .mb-nav-menu a:hover{
+		color: blue;
+	}
+
+	.hero-buttons a:hover{
+		background: var(--button-hover-color);
+	}
+
+	#courses{
+		.button-action:hover{
+			background: var(--button-action-hover-color);
+		}
+
+		.button-read-more:hover{
+			background: var(--button-hover-color);
+		}
+	}
+}
 
 
 
@@ -940,9 +929,6 @@ footer{
 		background-position: 0 0;
 	}
 }
-
-
-
 
 @keyframes bg-sliding{
 	from{
