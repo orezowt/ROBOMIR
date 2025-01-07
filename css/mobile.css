@@ -113,6 +113,10 @@
 			display: none;
 		}
 
+		#mb-nav-menu{
+			display: flex;
+		}
+
 		.header-title{
 			display: none;
 		}
@@ -126,6 +130,7 @@
 				font-size: 1.5rem;
 			}
 		}
+
 	}
 
 	/* ОКНО ЗАЯВКИ	*/

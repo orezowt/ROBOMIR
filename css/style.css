@@ -27,7 +27,6 @@
 html{
 	scroll-behavior: smooth;
 	font-size: 62.5%;
-/*	scrollbar-gutter: stable;*/
 }
 
 
@@ -74,7 +73,6 @@ p{
 header{
 	height: var(--header-height);
 	background: #fee;
-/*	background: #01A0E2;*/
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -91,7 +89,6 @@ header{
 		display: none;
 		font-size: 4rem;
 		color: #000;
-/*		font-weight: 800;	*/
 
 		span{
 			display: block;
@@ -140,8 +137,6 @@ header{
 		    -ms-flex-align: center;
 		        align-items: center;
 		font-size: 1.6rem;
-
-/*		display: none;*/
 	}
 
 	nav a{
@@ -170,8 +165,6 @@ header{
 
 	#mb-nav-menu{
 		display: none;
-
-/*		display: flex;*/
 		gap: 20px;
 		width: 100%;
 		-webkit-box-pack: end;
@@ -187,18 +180,29 @@ header{
 		}
 
 		.menu{
-			text-align: center;
-    display: block;
-    position: absolute;
-    bottom: -60px;
-    width: 100%;
-    left: 0;
-    background: #fee;
+	    position: absolute;
+      top: 100%;
+	    right: 10px;
+	    background: #fee;
+	    list-style: none;
+	    text-align: right;
 		}
 
 		.menu-item{
-			padding: 10px;
-			font-size: 3rem;
+			padding: 10px 20px;
+			font-size: 2rem;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+		}
+
+		.menu-item:hover{
+			background: #ffe8e8;
+		}
+
+		.menu-link{
+			text-decoration: none;
+			color: #333;
 		}
 	}
 }
@@ -890,31 +894,36 @@ footer{
 
 
 /*  ------  */
-@media(hover:hover){
-	input[type="submit"]:hover{
+@media(hover: hover){
+	input[type="submit"]:hover,
+	button[data-modal]:hover,
+	.hero-buttons a:hover,
+	#courses .button-read-more:hover
+	{
 		background: var(--button-hover-color);
 	}
 
-	button[data-modal]:hover{
-		background: var(--button-hover-color);
+	#courses .button-action:hover{
+		background: var(--button-action-hover-color);
 	}
 
 	nav a:hover, .mb-nav-menu a:hover{
 		color: blue;
 	}
+}
 
-	.hero-buttons a:hover{
-		background: var(--button-hover-color);
+@media(hover: none) and (pointer: coarse){
+	input[type="submit"]:hover,
+	button[data-modal]:hover,
+	.hero-buttons a:hover,
+	#courses .button-read-more:hover,
+	#courses .button-action:hover
+	{
+		background: var(--button-color);
 	}
 
-	#courses{
-		.button-action:hover{
-			background: var(--button-action-hover-color);
-		}
-
-		.button-read-more:hover{
-			background: var(--button-hover-color);
-		}
+	nav a:hover, .mb-nav-menu a:hover{
+		color: #333;
 	}
 }
 
