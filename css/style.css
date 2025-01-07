@@ -7,7 +7,8 @@
 
 /*-----------------*/
 :root{
-	--header-height: 80px;
+	--header-height: 70px;
+	--header-color: #fee;
 	--section-even-color: #fff;
 	--section-odd-color: #ECE8E8;
 	--button-color: #00BFFF;
@@ -27,6 +28,13 @@
 html{
 	scroll-behavior: smooth;
 	font-size: 62.5%;
+/*	height: 100%;*/
+}
+
+html, body{
+/*	width: 100%;*/
+/*	height: 100%;*/
+/*	overflow-x: hidden;*/
 }
 
 
@@ -72,7 +80,7 @@ p{
 
 header{
 	height: var(--header-height);
-	background: #fee;
+	background: var(--header-color);
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -81,6 +89,7 @@ header{
 	        align-items: center;
 	padding: 0 20px;
 	gap: 20px;
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 90;
@@ -165,27 +174,34 @@ header{
 
 	#mb-nav-menu{
 		display: none;
-		gap: 20px;
+		gap: 10px;
 		width: 100%;
+    height: 100%;
 		-webkit-box-pack: end;
 		    -ms-flex-pack: end;
 		        justify-content: flex-end;
+    align-items: center;
+    
 
 		#mb-button-menu{
 			width: 50px;
 			height: 50px;
 			border: none;
-			background: url("../images/icons/menu.png") no-repeat center / contain;
-			background-size: 80%;
+			background: transparent;
+			font-size: 4rem;
 		}
 
 		.menu{
 	    position: absolute;
       top: 100%;
 	    right: 10px;
-	    background: #fee;
+	    background: var(--header-color);
 	    list-style: none;
 	    text-align: right;
+	    display: none;
+	    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+	    border-radius: 0 0 10px 10px;
+	    z-index: 80;
 		}
 
 		.menu-item{
@@ -197,12 +213,20 @@ header{
 		}
 
 		.menu-item:hover{
-			background: #ffe8e8;
+/*			background: #ffe8e8;*/
+		}
+
+		.menu-item:hover > a{
+			color: blue;
 		}
 
 		.menu-link{
 			text-decoration: none;
 			color: #333;
+		}
+
+		#mb-button-modal-2{
+			display: none;
 		}
 	}
 }

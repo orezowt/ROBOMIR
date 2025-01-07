@@ -125,6 +125,7 @@
 			display: block;
 			font-size: 4vw;
 			font-size: 4rem;
+			flex-basis: 100%;
 
 			span{
 				font-size: 1.5rem;
@@ -218,12 +219,37 @@
 	}
 
 	.mb-header-title{
-			display: block;
-			font-size: 6vw !important;
+		display: block;
+		font-size: 6vw !important;
 
-			span{
-				font-size: 2.5vw !important;
+		span{
+			font-size: 2.5vw !important;
+		}
+	}
+
+	header{
+		#mb-nav-menu{
+			width: auto;
+
+			#mb-button-modal-1{
+				display: none;
 			}
+
+			#mb-button-modal-2{
+				display: block;
+				margin-top: 10px;
+			}
+
+			.menu{
+			    padding: 0px 20px 20px;
+			    text-align: center;
+			}
+
+			.menu-item{
+				padding: 10px 0px;
+	            border-bottom: 1px solid #00bfff38;
+		    }
+		}
 	}
 
 
