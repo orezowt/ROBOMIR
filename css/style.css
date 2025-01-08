@@ -904,6 +904,37 @@ footer{
 		}
 	}
 
+	.footer-course{
+		justify-content: center;
+/*		align-items: center;*/
+
+		.footer-title{
+			font-size: 2.4rem;
+			font-weight: 800;
+			line-height: normal;
+			text-align: center;
+
+			span{
+				color: var(--button-hover-color);
+			}
+		}
+	}
+
+	button[data-modal]{
+		background: var(--button-color);
+		border: none;
+		padding: 10px 20px !important;
+		border-radius: 25px;
+		-webkit-transition: 0.5s;
+		-o-transition: 0.5s;
+		transition: 0.5s;
+		color: #fff;
+		font-weight: 600;
+		padding: 0;
+		font-size: 1.8rem;
+		margin: auto;
+	}
+
 	#policy{
 		gap: 20px;
 
