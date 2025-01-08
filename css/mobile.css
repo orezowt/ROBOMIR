@@ -314,9 +314,9 @@
 
 	/* ФОРМА ЗАЯВКИ	*/
 	.modal{
-		button{
-			top: 1%;
-			right: 2%;
+		#modal-button-close{
+			top: 3%;
+			right: 3%;
 		}
 
 		.modal-title{
