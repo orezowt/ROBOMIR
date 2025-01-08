@@ -938,7 +938,8 @@ footer{
 	}
 }
 
-@media(hover: none) and (pointer: coarse){
+/*@media(hover: none) and (pointer: coarse){*/
+@media(hover: none){
 	input[type="submit"]:hover,
 	button[data-modal]:hover,
 	.hero-buttons a:hover,
