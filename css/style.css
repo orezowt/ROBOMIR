@@ -368,7 +368,7 @@ main{
 
 #hero-section{
 	position: relative;
-	height: 100vh;
+	height: 20vh;
 	min-height: calc(100vh - var(--header-height));
 	padding: 0;
 	background: url("../images/bg.svg") no-repeat center / cover;
@@ -859,6 +859,7 @@ section:nth-child(even){
 
 /*  ФУТЕР  */
 footer{
+	position: relative;
 	padding: 50px 50px 20px;
 	background: url("../images/bg.svg") no-repeat center / cover;
 
@@ -876,7 +877,12 @@ footer{
 		row-gap: 10px;
 	}
 
+	.footer-main-content{
+		gap: 40px;
+	}
+
 	.footer-contacts{
+		width: 40%;
 		row-gap: 10px;
 		-webkit-box-align: end;
 		    -ms-flex-align: end;
@@ -889,30 +895,34 @@ footer{
 		}
 	}
 
-	div{
+	/*div{
 		min-width: 30%;
-	}
+	}*/
 
 	#footer-logo{
+		width: 20%;
 		text-align: center;
+		min-width: 100px;
 
 		img{
-			width: 150px;
-			height: 150px;
+			width: 100%;
+			max-width: 140px;
+			height: 100%;
 			-o-object-fit: contain;
 			   object-fit: contain;
 		}
 	}
 
 	.footer-course{
+		width: 40%;
 		justify-content: center;
-/*		align-items: center;*/
+		align-items: flex-start;
 
 		.footer-title{
 			font-size: 2.4rem;
 			font-weight: 800;
 			line-height: normal;
-			text-align: center;
+/*			text-align: center;*/
 
 			span{
 				color: var(--button-hover-color);
@@ -932,14 +942,20 @@ footer{
 		font-weight: 600;
 		padding: 0;
 		font-size: 1.8rem;
-		margin: auto;
+/*		margin: auto;*/
 	}
 
 	#policy{
-		gap: 20px;
+		gap: 0;
+		margin-top: 40px;
+
+		.row-content{
+			gap: 20px;
+		}
 
 		p{
 			font-size: 1.4rem;
+			color: #444;
 		}
 
 		a{

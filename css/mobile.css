@@ -92,6 +92,12 @@
 			width: 45%;
 		}
 	}
+
+	footer{
+		.footer-main-content{
+			gap: 30px;
+		}
+	}
 }
 
 
@@ -192,6 +198,12 @@
 			width: 45%;
 		}
 	}
+
+	footer{
+		.footer-main-content{
+			gap: 20px;
+		}
+	}
 }
 
 @media (max-width: 601px){
@@ -204,6 +216,20 @@
 	#feedback{
 		form{
 			width: 90%;
+		}
+	}
+
+	footer{
+		padding: 50px 20px 20px;
+
+		#footer-logo{
+			display: none;
+		}
+
+		.footer-contacts, .footer-course{
+			width: 50%;
+			align-items: center;
+			text-align: center;
 		}
 	}
 }
@@ -228,6 +254,10 @@
 	}
 
 	header{
+		#header-logo{
+			height: 80%;
+		}
+
 		#mb-nav-menu{
 			width: auto;
 
@@ -254,10 +284,12 @@
 
 
 	#hero-section{
-		min-height: calc(100vh - var(--header-height));
+		min-height: 30vh;
+		height: auto;
+
 
 		.hero-section-image{
-	/*			display: none;*/
+	/*		display: none;*/
 			position: absolute;
 			inset: 0;
 			z-index: 2;
@@ -269,7 +301,7 @@
 			height: 100%;
 			background: #fff9;
 			z-index: 4;
-			padding: 50px 10vw 0 10vw;
+			padding: 50px 10vw 50px 10vw;
 			margin: 0;
 		}
 
