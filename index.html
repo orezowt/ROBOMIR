@@ -76,10 +76,10 @@
 			</div>
 
 			<div class="column-content modal-form">
-				<form action="">
-					<input type="text" name="name" id="name" placeholder="Имя" required>
-					<input type="tel" name="phone" placeholder="Телефон" required>
-					<input type="email" name="email" placeholder="Эл. почта">
+				<form id="modal-form" action="">
+					<input type="text" name="name" id="input-modal-name" placeholder="Имя" required>
+					<input type="tel" name="phone" id="input-modal-phone" placeholder="Телефон" required>
+					<input type="email" name="email" id="input-modal-email" placeholder="Эл. почта">
 					<select name="course" id="course-select">
 						<option value="">-- Выберите курс --</option>
 						<optgroup label="От 6 до 10 лет">
@@ -95,6 +95,8 @@
 							<option value="Unity">Разработка игр на Unity</option>
 						</optgroup>
 					</select>
+
+					<p id="modal-form-popup-text" class="popup-text"></p>
 					<input type="submit" value="Оставить заявку">
 				</form>
 			</div>
@@ -364,19 +366,20 @@
 			<h2>Остались вопросы?</h2>
 			<h3>Оставьте заявку и мы с Вами свяжемся!</h3>
 
-			<form action="" class="column-content">
-				<label for="input-name" class="sr-only">Ваше имя</label>
-				<input type="text" id="input-name" name="name" placeholder="Ваше имя" required>
+			<form id="contact-us-form" action="" class="column-content">
+				<label for="input-contact-us-name" class="sr-only">Ваше имя</label>
+				<input type="text" id="input-contact-us-name" name="name" placeholder="Ваше имя" required>
 
-				<label for="input-phone" class="sr-only">Телефон</label>
-				<input type="phone" id="input-phone" name="phone" placeholder="Телефон" required>
+				<label for="input-contact-us-phone" class="sr-only">Телефон</label>
+				<input type="phone" id="input-contact-us-phone" name="phone" placeholder="Телефон" required>
 
-				<label for="input-email" class="sr-only">Электронная почта</label>
-				<input type="email" id="input-email" name="email" placeholder="Эл. почта">
+				<label for="input-contact-us-email" class="sr-only">Электронная почта</label>
+				<input type="email" id="input-contact-us-email" name="email" placeholder="Эл. почта">
 
-				<label for="input-message" class="sr-only">Задайте ваш вопрос здесь</label>
-				<textarea name="message" id="input-message" placeholder="Укажите Ваш вопрос здесь..."></textarea>
+				<label for="input-contact-us-message" class="sr-only">Задайте ваш вопрос здесь</label>
+				<textarea name="message" id="input-contact-us-message" placeholder="Укажите Ваш вопрос здесь..."></textarea>
 
+				<p id="contact-us-form-popup-text" class="popup-text"></p>
 				<input type="submit" value="Отправить">
 			</form>
 		</section>
@@ -426,6 +429,7 @@
 	<script src="js/masked_input.js"></script>
 	<script src="js/modal-window.js"></script>
 	<script src="js/nav-menu.js"></script>
+	<script src="js/send-mail.js"></script>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
