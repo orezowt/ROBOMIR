@@ -120,6 +120,8 @@
 		}
 
 		#mb-nav-menu{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
 		}
 
@@ -131,7 +133,8 @@
 			display: block;
 			font-size: 4vw;
 			font-size: 4rem;
-			flex-basis: 100%;
+			-ms-flex-preferred-size: 100%;
+			    flex-basis: 100%;
 
 			span{
 				font-size: 1.5rem;
@@ -228,7 +231,9 @@
 
 		.footer-contacts, .footer-course{
 			width: 50%;
-			align-items: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 			text-align: center;
 		}
 	}
@@ -406,5 +411,4 @@
 		}
 	}
 }
-
 
