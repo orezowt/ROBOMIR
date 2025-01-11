@@ -245,6 +245,10 @@
 		font-size: 50%;
 	}
 
+	header{
+		height: 70px;
+	}
+
 	section h1{
 		font-size: 3.4rem;
 	}

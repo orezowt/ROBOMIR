@@ -7,7 +7,7 @@
 
 /*-----------------*/
 :root{
-	--header-height: 70px;
+	--header-height: 80px;
 	--header-color: #fee;
 	--section-even-color: #fff;
 	--section-odd-color: #ECE8E8;
@@ -43,6 +43,10 @@ p{
 	line-height: 1.5;
 }
 
+a, button, input[type="submit"]{
+	cursor: pointer;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -76,6 +80,11 @@ p{
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+}
+
+.popup-text{
+	text-align: center;
+	color: #eb4d4d;
 }
 
 header{
@@ -184,7 +193,6 @@ header{
         -ms-flex-align: center;
             align-items: center;
     
-
 		#mb-button-menu{
 			width: 50px;
 			height: 50px;
