@@ -77,9 +77,15 @@
 
 			<div class="column-content modal-form">
 				<form id="modal-form" action="">
-					<input type="text" name="name" id="input-modal-name" placeholder="Имя" required>
-					<input type="tel" name="phone" id="input-modal-phone" placeholder="Телефон" required>
-					<input type="email" name="email" id="input-modal-email" placeholder="Эл. почта">
+					<label for="input-modal-name" class="sr-only">Ваше имя</label>
+					<input type="text" name="name" id="input-modal-name" placeholder="Имя" autocomplete="on" required>
+
+					<label for="input-modal-phone" class="sr-only">Номер телефона</label>
+					<input type="tel" name="phone" id="input-modal-phone" placeholder="Телефон" autocomplete="on" required>
+
+					<label for="input-modal-email" class="sr-only">Электронная почта</label>
+					<input type="email" name="email" id="input-modal-email" placeholder="Эл. почта" autocomplete="on">
+
 					<select name="course" id="course-select">
 						<option value="">-- Выберите курс --</option>
 						<optgroup label="От 6 до 10 лет">
