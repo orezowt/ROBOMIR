@@ -626,12 +626,12 @@ section:nth-child(even){
 	/*	transition: 0.8s;*/
 
 		/* -- ВАРИАНТ 1 */
-		.courses-image{
+		/*.courses-image{
 			height: 100%;
 			-ms-flex-preferred-size: 40%;
 			    flex-basis: 40%;
 			border-radius: 25px 0 0 25px;
-		}
+		}*/
 
 		/*  ВАРИАНТ 2 */
 		.courses-image{
@@ -644,6 +644,30 @@ section:nth-child(even){
 			left: -50px;
 			-webkit-box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 			        box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+		}
+
+		.courses-image img{
+			display: none;
+		}
+
+		.course-slider{
+			width: 100%;
+			height: 100%;
+		}
+
+		.courses-image ul{
+			width: 100%;
+			height: 100%;
+			list-style: none;
+			position: relative;
+
+			li{
+/*				width: 100%;*/
+				height: 100%;
+				background: no-repeat center / cover;
+				display: block;
+				float: left;
+			}
 		}
 
 		.courses-info{
