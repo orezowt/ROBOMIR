@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 $(window).resize(function(){
   heroSliderResize("#hero-image-slider")
   if (currentPressedBtn != null){
-    courseSliderResize(sliderID)
+    // courseSliderResize(sliderID)
     $(sliderID).removeClass('full-description')
     $(currentPressedBtn).text('Узнать больше')
   }
