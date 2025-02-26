@@ -1,0 +1,476 @@
+/* БОЛЬШИЕ МОНИТОРЫ */
+@media (min-width: 1281px) {
+	html{
+		font-size: 62.5%;
+	}
+
+	#courses{
+		.courses{
+			width: 320px;
+		}
+	}
+}
+
+
+
+
+@media (max-width: 1060px){
+	header{
+		nav{
+			gap: 10px;
+		}
+
+		.row-content{
+			display: none;
+		}
+
+		.mb-header-title{
+			display: block;
+			font-size: 4vw;
+
+			span{
+				font-size: 1.5vw;
+			}
+		}
+	}
+}
+
+
+
+
+
+/* СРЕДНИЕ МОНИТОРЫ */
+@media (min-width: 992px) and (max-width: 1199px) {
+	html{
+		font-size: 62.5%;
+	}
+/* 	
+	.header-title h1:first-child{
+		font-size: 3vw;
+	}*/
+	.courses{
+		width: 300px;
+	}
+	
+}
+
+
+
+
+
+/* МАЛЕНЬКИЕ МОНИТОРЫ */
+@media (min-width: 768px) and (max-width: 991px) {
+	html{
+			font-size: 50%;
+	}
+
+	section{
+		padding: 50px 5vw;
+	}
+
+	header{
+		nav{
+			gap: 10px;
+		}
+
+		.row-content{
+			display: none;
+		}
+
+		.mb-header-title{
+			display: block;
+			font-size: 4vw;
+
+			span{
+				font-size: 1.5vw;
+			}
+		}
+	}
+
+	#courses{
+		.courses{
+			width: 45%;
+		}
+	}
+
+	footer{
+		.footer-main-content{
+			gap: 30px;
+		}
+	}
+}
+
+
+
+
+
+
+/* ПЛАНШЕТЫ И АЛЬБОМНАЯ ОРИЕНТАЦИЯ ТЕЛЕФОНОВ */
+@media (max-width: 767px) {
+	html{
+			font-size: 50%;
+	}
+
+	header{
+		gap: 10px;
+
+		nav{
+			gap: 10px;
+			display: none;
+		}
+
+		#mb-nav-menu{
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+
+		.header-title{
+			display: none;
+		}
+
+		.mb-header-title{
+			display: block;
+			font-size: 4vw;
+			font-size: 4rem;
+			-ms-flex-preferred-size: 100%;
+			    flex-basis: 100%;
+
+			span{
+				font-size: 1.5rem;
+			}
+		}
+
+	}
+
+	/* ОКНО ЗАЯВКИ	*/
+	.modal{
+		.modal-wrapper{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			padding: 40px;
+			row-gap: 10px;
+		}
+
+		.modal-content{
+			row-gap: 20px;
+		}
+
+		.modal-form{
+			form{
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: wrap;
+				    flex-wrap: wrap;
+				gap: 10px;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
+			}
+
+			input, select{
+				width: 48%;
+			}
+
+			input[type="submit"]{
+				width: auto;
+			}
+		}
+	}
+
+	section{
+		padding: 60px 5vw;
+	}
+
+	.about-us-indicators{
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		row-gap: 20px;
+		gap: 20px;
+
+		div{
+			width: 150px !important;
+		}
+	}
+
+	#courses{
+		.courses{
+			width: 45%;
+		}
+	}
+
+	footer{
+		.footer-main-content{
+			gap: 20px;
+		}
+	}
+}
+
+@media (max-width: 601px){
+	#hero-section{
+		min-height: 30vh;
+		height: auto;
+
+
+		.hero-section-image{
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			width: 100%;
+		}
+
+		.hero-section-content{
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.75);
+			z-index: 4;
+			padding: 50px 10vw 50px 10vw;
+			margin: 0;
+		}
+
+		.hero-buttons{
+			-webkit-box-align: start;
+			    -ms-flex-align: start;
+			        align-items: flex-start;
+		}
+	}
+
+	#courses{
+		.courses{
+			width: 80%;
+		}
+	}
+
+	#feedback{
+		form{
+			width: 90%;
+		}
+	}
+
+		#contacts{
+		.contacts-wrapper{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			row-gap: 0;
+		}
+
+		.contacts-info{
+			width: 100%;
+			padding: 60px 5vw 20px 5vw;
+			gap: 20px;
+			text-align: left;
+			white-space: pre-line;
+
+			h1{
+				margin-bottom: 20px;
+			}
+
+			.row-content{
+				gap: 10px;
+				margin-left: 10vw;
+			}
+		}
+
+		.contacts-map{
+			width: 100%;
+			height: 300px;
+		}
+	}
+
+	footer{
+		padding: 50px 20px 20px;
+
+		#footer-logo{
+			display: none;
+		}
+
+		.footer-contacts, .footer-course{
+			width: 50%;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
+			text-align: center;
+		}
+	}
+}
+
+
+@media (max-width: 480px) {
+	html{
+		font-size: 50%;
+	}
+
+	header{
+		height: 60px;
+	}
+
+	section h1{
+		font-size: 3.4rem;
+	}
+
+	.mb-header-title{
+		display: block;
+		font-size: 6vw !important;
+
+		span{
+			font-size: 3vw !important;
+		}
+	}
+
+	header{
+		#header-logo{
+			height: 80%;
+		}
+
+		#mb-nav-menu{
+			width: auto;
+
+			#mb-button-modal-1{
+				display: none;
+			}
+
+			#mb-button-modal-2{
+				display: block;
+				margin-top: 10px;
+			}
+
+			.menu{
+			    padding: 0px 20px 20px;
+			    text-align: center;
+			}
+
+			.menu-item{
+				padding: 10px 0px;
+	            border-bottom: 1px solid #00bfff38;
+		    }
+		}
+	}
+
+
+	/*#hero-section{
+		min-height: 30vh;
+		height: auto;
+
+
+		.hero-section-image{
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			width: 100%;
+		}
+
+		.hero-section-content{
+			width: 100%;
+			height: 100%;
+			background: rgba(255, 255, 255, 0.75);
+			z-index: 4;
+			padding: 50px 10vw 50px 10vw;
+			margin: 0;
+		}
+
+		.hero-buttons{
+			-webkit-box-align: start;
+			    -ms-flex-align: start;
+			        align-items: flex-start;
+		}
+	}*/
+
+	/* ФОРМА ЗАЯВКИ	*/
+	.modal{
+		#modal-button-close{
+			top: 3%;
+			right: 3%;
+		}
+
+		.modal-title{
+			font-size: 3rem;
+		}
+
+		.modal-content{
+			text-align: center;
+		}
+
+		.modal-form{
+			form{
+				gap: 0;
+			}
+
+			input, select{
+				width: 100% !important;
+			}
+
+			select, input:not(input[type='submit']){
+				padding: 15px 20px;
+			}
+		}		
+	}
+
+
+	/* РАЗДЕЛ С КУРСАМИ	*/
+	#courses{
+		.courses{
+			width: 100%;
+		}
+	}
+
+
+	/* РАЗДЕЛ С ОТЗЫВАМИ	*/
+	#reviews{
+		h1{
+			margin-bottom: 0;
+		}
+	}
+
+
+	/* РАЗДЕЛ КОНТАКТОВ	*/
+/*	#contacts{
+		.contacts-wrapper{
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+			row-gap: 0;
+		}
+
+		.contacts-info{
+			width: 100%;
+			padding: 60px 5vw 20px 5vw;
+			gap: 20px;
+			text-align: left;
+			white-space: pre-line;
+
+			h1{
+				margin-bottom: 20px;
+			}
+
+			.row-content{
+				gap: 10px;
+				margin-left: 10vw;
+			}
+		}
+
+		.contacts-map{
+			width: 100%;
+			height: 300px;
+		}
+	}*/
+
+
+	/* ФОРМА ЗАПИСИ	*/
+	#feedback{
+		form{
+			width: 90vw;
+			padding: 30px 20px;
+			row-gap: 10px;
+		}
+
+		input, textarea{
+			padding: 15px 20px;
+		}
+	}
+}

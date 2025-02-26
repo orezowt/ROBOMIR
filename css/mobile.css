@@ -4,10 +4,8 @@
 		font-size: 62.5%;
 	}
 
-	#courses{
-		.courses{
-			width: 320px;
-		}
+	.courses{
+		width: 320px;
 	}
 }
 
@@ -15,23 +13,21 @@
 
 
 @media (max-width: 1060px){
-	header{
-		nav{
-			gap: 10px;
-		}
+	header nav{
+		gap: 10px;
+	}
 
-		.row-content{
-			display: none;
-		}
+	header .row-content{
+		display: none;
+	}
 
-		.mb-header-title{
-			display: block;
-			font-size: 4vw;
+	.mb-header-title{
+		display: block;
+		font-size: 4vw;
+	}
 
-			span{
-				font-size: 1.5vw;
-			}
-		}
+	.mb-header-title span{
+		font-size: 1.5vw;
 	}
 }
 
@@ -68,35 +64,29 @@
 		padding: 50px 5vw;
 	}
 
-	header{
-		nav{
-			gap: 10px;
-		}
-
-		.row-content{
-			display: none;
-		}
-
-		.mb-header-title{
-			display: block;
-			font-size: 4vw;
-
-			span{
-				font-size: 1.5vw;
-			}
-		}
+	header nav{
+		gap: 10px;
 	}
 
-	#courses{
-		.courses{
-			width: 45%;
-		}
+	header .row-content{
+		display: none;
 	}
 
-	footer{
-		.footer-main-content{
-			gap: 30px;
-		}
+	.mb-header-title{
+		display: block;
+		font-size: 4vw;
+	}
+
+	.mb-header-title span{
+		font-size: 1.5vw;
+	}
+
+	.courses{
+		width: 45%;
+	}
+
+	.footer-main-content{
+		gap: 30px;
 	}
 }
 
@@ -113,72 +103,69 @@
 
 	header{
 		gap: 10px;
-
-		nav{
-			gap: 10px;
-			display: none;
-		}
-
-		#mb-nav-menu{
-			display: -webkit-box;
-			display: -ms-flexbox;
-			display: flex;
-		}
-
-		.header-title{
-			display: none;
-		}
-
-		.mb-header-title{
-			display: block;
-			font-size: 4vw;
-			font-size: 4rem;
-			-ms-flex-preferred-size: 100%;
-			    flex-basis: 100%;
-
-			span{
-				font-size: 1.5rem;
-			}
-		}
-
 	}
 
+	header nav{
+		gap: 10px;
+		display: none;
+	}
+
+	#mb-nav-menu{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+
+	.header-title{
+		display: none;
+	}
+
+	.mb-header-title{
+		display: block;
+		font-size: 4vw;
+		font-size: 4rem;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
+	}
+
+	.mb-header-title span{
+		font-size: 1.5rem;
+	}
+
+
 	/* ОКНО ЗАЯВКИ	*/
-	.modal{
-		.modal-wrapper{
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			    -ms-flex-direction: column;
-			        flex-direction: column;
-			padding: 40px;
-			row-gap: 10px;
-		}
+	.modal-wrapper{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		padding: 40px;
+		row-gap: 10px;
+	}
 
-		.modal-content{
-			row-gap: 20px;
-		}
+	.modal-content{
+		row-gap: 20px;
+	}
 
-		.modal-form{
-			form{
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-ms-flex-wrap: wrap;
-				    flex-wrap: wrap;
-				gap: 10px;
-				-webkit-box-pack: center;
-				    -ms-flex-pack: center;
-				        justify-content: center;
-			}
+	.modal-form form{
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		gap: 10px;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
 
-			input, select{
-				width: 48%;
-			}
+	.modal-form input, .modal-form select{
+		width: 48%;
+	}
 
-			input[type="submit"]{
-				width: auto;
-			}
-		}
+	.modal-form input[type="submit"]{
+		width: auto;
+		padding: 20px 50px;
 	}
 
 	section{
@@ -190,112 +177,130 @@
 		    flex-wrap: wrap;
 		row-gap: 20px;
 		gap: 20px;
-
-		div{
-			width: 150px !important;
-		}
 	}
 
-	#courses{
-		.courses{
-			width: 45%;
-		}
+	.about-us-indicators div{
+		width: 150px !important;
 	}
 
-	footer{
-		.footer-main-content{
-			gap: 20px;
-		}
+	.courses{
+		width: 45%;
+	}
+
+	.footer-main-content{
+		gap: 20px;
 	}
 }
+
+
 
 @media (max-width: 601px){
 	#hero-section{
 		min-height: 30vh;
 		height: auto;
-
-
-		.hero-section-image{
-			position: absolute;
-			inset: 0;
-			z-index: 2;
-			width: 100%;
-		}
-
-		.hero-section-content{
-			width: 100%;
-			height: 100%;
-			background: rgba(255, 255, 255, 0.75);
-			z-index: 4;
-			padding: 50px 10vw 50px 10vw;
-			margin: 0;
-		}
-
-		.hero-buttons{
-			-webkit-box-align: start;
-			    -ms-flex-align: start;
-			        align-items: flex-start;
-		}
 	}
 
-	#courses{
+	.hero-section-image{
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+		width: 100%;
+	}
+
+	.hero-section-content{
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 255, 255, 0.75);
+		z-index: 4;
+		padding: 50px 10vw 50px 10vw;
+		margin: 0;
+	}
+
+	.hero-buttons{
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+	}
+
 		.courses{
 			width: 80%;
 		}
+
+	#feedback form{
+		width: 90%;
 	}
 
-	#feedback{
-		form{
-			width: 90%;
-		}
+	.contacts-wrapper{
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		row-gap: 0;
 	}
 
-		#contacts{
-		.contacts-wrapper{
-			-webkit-box-orient: vertical;
-			-webkit-box-direction: normal;
-			    -ms-flex-direction: column;
-			        flex-direction: column;
-			row-gap: 0;
-		}
+	.contacts-info{
+		width: 100%;
+		padding: 60px 5vw 20px 5vw;
+		gap: 20px;
+		text-align: left;
+		white-space: pre-line;
+	}
+	.contacts-info h1{
+		margin-bottom: 20px;
+	}
 
-		.contacts-info{
-			width: 100%;
-			padding: 60px 5vw 20px 5vw;
-			gap: 20px;
-			text-align: left;
-			white-space: pre-line;
+	.contacts-info .row-content{
+		gap: 10px;
+		margin-left: 10vw;
+	}
 
-			h1{
-				margin-bottom: 20px;
-			}
-
-			.row-content{
-				gap: 10px;
-				margin-left: 10vw;
-			}
-		}
-
-		.contacts-map{
-			width: 100%;
-			height: 300px;
-		}
+	.contacts-map{
+		width: 100%;
+		height: 300px;
 	}
 
 	footer{
 		padding: 50px 20px 20px;
+	}
 
-		#footer-logo{
-			display: none;
-		}
+	#footer-logo{
+		display: none;
+	}
 
-		.footer-contacts, .footer-course{
-			width: 50%;
-			-webkit-box-align: center;
-			    -ms-flex-align: center;
-			        align-items: center;
-			text-align: center;
-		}
+	.footer-contacts, .footer-course{
+		width: 50%;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		text-align: center;
+	}
+
+
+	/* ФОРМА ЗАЯВКИ	*/
+	#modal-button-close{
+		top: 3%;
+		right: 3%;
+	}
+
+	.modal-title{
+		font-size: 3rem;
+	}
+
+	.modal-content{
+		text-align: center;
+	}
+
+	.modal-form form{
+		gap: 0;
+	}
+
+	.modal-form input, .modal-form select{
+		width: 100% !important;
+	}
+
+	.modal-form select,
+	.modal-form input:not(input[type='submit']){
+		padding: 15px 20px;
 	}
 }
 
@@ -316,40 +321,38 @@
 	.mb-header-title{
 		display: block;
 		font-size: 6vw !important;
-
-		span{
-			font-size: 3vw !important;
-		}
 	}
 
-	header{
-		#header-logo{
-			height: 80%;
-		}
-
-		#mb-nav-menu{
-			width: auto;
-
-			#mb-button-modal-1{
-				display: none;
-			}
-
-			#mb-button-modal-2{
-				display: block;
-				margin-top: 10px;
-			}
-
-			.menu{
-			    padding: 0px 20px 20px;
-			    text-align: center;
-			}
-
-			.menu-item{
-				padding: 10px 0px;
-	            border-bottom: 1px solid #00bfff38;
-		    }
-		}
+	.mb-header-title span{
+		font-size: 3vw !important;
 	}
+
+	#header-logo{
+		height: 80%;
+	}
+
+	#mb-nav-menu{
+		width: auto;
+	}
+
+	#mb-nav-menu #mb-button-modal-1{
+		display: none;
+	}
+
+	#mb-nav-menu #mb-button-modal-2{
+		display: block;
+		margin-top: 10px;
+	}
+
+	#mb-nav-menu .menu{
+	    padding: 0px 20px 20px;
+	    text-align: center;
+	}
+
+	#mb-nav-menu .menu-item{
+		padding: 10px 0px;
+        border-bottom: 1px solid #00bfff38;
+    }
 
 
 	/*#hero-section{
@@ -380,50 +383,18 @@
 		}
 	}*/
 
-	/* ФОРМА ЗАЯВКИ	*/
-	.modal{
-		#modal-button-close{
-			top: 3%;
-			right: 3%;
-		}
-
-		.modal-title{
-			font-size: 3rem;
-		}
-
-		.modal-content{
-			text-align: center;
-		}
-
-		.modal-form{
-			form{
-				gap: 0;
-			}
-
-			input, select{
-				width: 100% !important;
-			}
-
-			select, input:not(input[type='submit']){
-				padding: 15px 20px;
-			}
-		}		
-	}
+	
 
 
 	/* РАЗДЕЛ С КУРСАМИ	*/
-	#courses{
-		.courses{
-			width: 100%;
-		}
+	.courses{
+		width: 100%;
 	}
 
 
 	/* РАЗДЕЛ С ОТЗЫВАМИ	*/
-	#reviews{
-		h1{
-			margin-bottom: 0;
-		}
+	#reviews h1{
+		margin-bottom: 0;
 	}
 
 
@@ -462,15 +433,14 @@
 
 
 	/* ФОРМА ЗАПИСИ	*/
-	#feedback{
-		form{
-			width: 90vw;
-			padding: 30px 20px;
-			row-gap: 10px;
-		}
+	#feedback form{
+		width: 90vw;
+		padding: 30px 20px;
+		row-gap: 10px;
+	}
 
-		input, textarea{
-			padding: 15px 20px;
-		}
+	#feedback input,
+	#feedback textarea{
+		padding: 15px 20px;
 	}
 }
