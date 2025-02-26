@@ -165,7 +165,7 @@
 
 	.modal-form input[type="submit"]{
 		width: auto;
-		padding: 20px 50px;
+		padding: 20px;
 	}
 
 	section{
@@ -282,7 +282,7 @@
 		right: 3%;
 	}
 
-	.modal-title{
+	.modal .modal-title{
 		font-size: 3rem;
 	}
 
