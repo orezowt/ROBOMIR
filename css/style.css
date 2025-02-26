@@ -470,16 +470,16 @@ section{
 	padding: 100px 10vw;
 	position: relative;
 	text-align: justify;
+}
 
-	h1{
-		margin-bottom: 40px;
-		text-align: center;
-		font-size: 4.2rem;
-	}
+section h1{
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 4.2rem;
+}
 
-	h3{
-		text-align: center;
-	}
+section h3{
+	text-align: center;
 }
 
 section:nth-child(odd){
@@ -488,34 +488,31 @@ section:nth-child(odd){
 
 section:nth-child(even){
 	background: var(--section-even-color);
-/*	background: url("../images/bg-section-2.svg") no-repeat center / cover;*/
 }
 
 
 
 
 /*  РАЗДЕЛ О НАС  */
-#about-us{
-	.about-us-description{
-		padding-bottom: 40px;
-		border-bottom: 1px solid #000;
-	}
+.about-us-description{
+	padding-bottom: 40px;
+	border-bottom: 1px solid #000;
+}
 
-	.about-us-indicators{
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
-	}
+.about-us-indicators{
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
 
-	.about-us-indicators div{
-		text-align: center;
-		width: 200px;
-	}
+.about-us-indicators div{
+	text-align: center;
+	width: 200px;
+}
 
-	.about-us-indicators div p:first-child{
-		font-size: 3rem;
-		font-weight: 600;
-	}
+.about-us-indicators div p:first-child{
+	font-size: 3rem;
+	font-weight: 600;
 }
 /* ------- */
 
