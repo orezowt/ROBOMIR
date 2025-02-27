@@ -39,4 +39,32 @@ $(document).ready(function(){
     }
     ]
   });
+
+  if (window.innerWidth <= 601){
+    $('.courses-slider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true
+  })
+  }
+  else{
+    $('.courses-slider').unslick()
+  }
 });
+
+$(window).resize(function(){
+  if (window.innerWidth > 601){
+    $('.courses-slider').slick('unslick')
+  }
+  else{
+    if(!$('.courses-slider').hasClass('slick-slider')){
+      $('.courses-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+        })
+      }
+    }
+})
