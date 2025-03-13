@@ -27,9 +27,11 @@ function switch_view(button, class_name){
 	})
 	
 	selected_course.classList.toggle(class_name)
-	selected_course.scrollIntoView(
-		{behaviour: 'smooth', block: 'center'}
-		)
+	// if (screen_width > 600){
+		selected_course.scrollIntoView(
+			{behaviour: 'smooth', block: 'center'}
+			)
+	// }
 }
 
 

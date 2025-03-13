@@ -49,13 +49,15 @@ $(document).ready(function(){
   })
   }
   else{
-    $('.courses-slider').unslick()
+    // $('.courses-slider').unslick()
   }
 });
 
 $(window).resize(function(){
   if (window.innerWidth > 601){
-    $('.courses-slider').slick('unslick')
+    if ($('.courses-slider').hasClass('slick-initialized')){
+      $('.courses-slider').slick('unslick')
+    }
   }
   else{
     if(!$('.courses-slider').hasClass('slick-slider')){
