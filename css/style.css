@@ -278,6 +278,7 @@ dialog + .backdrop{
 
 .modal{
 	width: 85%;
+	height: 50%;
 	min-height: 70%;
 	position: fixed;
 	top: 50%;
